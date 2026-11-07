@@ -82,6 +82,7 @@ def readme(wb: Workbook) -> None:
         ("RateCase_Candidates", "Machine-extracted candidate decisions, one row per unit and ROE value; unverified reading aid."),
         ("ROE_Sentences", "Sentences in 10-K and 10-Q filings stating a return on equity that name the rate unit or its commission (reading aid)."),
         ("Subsidiary_Check", "Whether each operating utility appears in the holding company's FY2023 Exhibit 21."),
+        ("RateCase_Second_Pass", "Automated re-check of each decision against its source (quote, ROE, order month, equity); hand review in RateCase_Decisions.second_pass."),
     ]
     for text, bold in lines:
         ws.append([text])
@@ -257,6 +258,8 @@ def main() -> None:
     if (TABLES / "ratecase_subsidiary_check.csv").exists():
         write_table(wb.create_sheet("Subsidiary_Check"), pd.read_csv(TABLES / "ratecase_subsidiary_check.csv"),
                     widths={"operating_utility": 40, "ex21_url": 60}, url_cols={"ex21_url"})
+    if (TABLES / "ratecase_second_pass.csv").exists():
+        write_table(wb.create_sheet("RateCase_Second_Pass"), pd.read_csv(TABLES / "ratecase_second_pass.csv"))
     OUT.parent.mkdir(parents=True, exist_ok=True)
     wb.save(OUT)
     print("saved", OUT)

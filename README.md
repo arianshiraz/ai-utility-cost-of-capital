@@ -18,6 +18,7 @@ Regulators set the return that electricity networks may earn on equity, and cust
 │   ├── 06_select_ratecase_units.py  # one US rate unit per holding company (EIA-861)
 │   ├── 07_extract_ratecase_sentences.py # ROE sentences from 10-K and 10-Q filings (read in memory)
 │   ├── 08_ratecase_candidates.py    # candidate decisions per unit (unverified reading aid)
+│   ├── 10_ratecase_second_pass.py   # re-checks each coded decision against its source
 │   └── 09_build_workbook.py         # documented Excel workbook of all data
 ├── data/
 │   ├── project_data_workbook.xlsx   # every dataset gathered, with sources
