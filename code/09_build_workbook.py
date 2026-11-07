@@ -78,6 +78,10 @@ def readme(wb: Workbook) -> None:
         ("Hub_Flags_NonUS", "Whether each non-US network firm serves a national data-centre hub, with reason and source."),
         ("RateCase_Units", "The rate unit chosen for each US holding company (largest 2023 deliveries, EIA-861), with runner-up and margin."),
         ("US_Operating_Utilities", "Each holding company's consolidated electric operating utilities, EIA numbers and rate-unit groupings."),
+        ("RateCase_Decisions", "Hand-coded US rate-case decisions: authorised ROE, equity share, dates, panel inclusion, source and quote."),
+        ("RateCase_Candidates", "Machine-extracted candidate decisions, one row per unit and ROE value; unverified reading aid."),
+        ("ROE_Sentences", "Sentences in 10-K and 10-Q filings stating a return on equity that name the rate unit or its commission (reading aid)."),
+        ("Subsidiary_Check", "Whether each operating utility appears in the holding company's FY2023 Exhibit 21."),
     ]
     for text, bold in lines:
         ws.append([text])
@@ -237,6 +241,22 @@ def main() -> None:
     write_table(wb.create_sheet("US_Operating_Utilities"), pd.read_csv(CLS / "us_operating_utilities.csv"),
                 widths={"operating_utility": 40, "rate_unit": 50, "rate_unit_note": 60, "note": 50, "evidence": 50},
                 wrap={"rate_unit_note", "note", "evidence"})
+    write_table(wb.create_sheet("RateCase_Decisions"), pd.read_csv(CLS / "ratecase_decisions.csv", dtype=str),
+                widths={"rate_unit": 26, "decision_type": 34, "panel_note": 50, "source_url": 40, "quote": 90},
+                wrap={"decision_type", "panel_note", "quote"}, url_cols={"source_url"})
+    if (TABLES / "ratecase_candidates.csv").exists():
+        write_table(wb.create_sheet("RateCase_Candidates"), pd.read_csv(TABLES / "ratecase_candidates.csv", dtype=str),
+                    widths={"quote": 100, "url": 40, "date_phrases": 30}, wrap={"quote", "date_phrases"},
+                    url_cols={"url"})
+    if (TABLES / "roe_sentences.csv").exists():
+        s = pd.read_csv(TABLES / "roe_sentences.csv")
+        s = s[s["names_unit"] == 1].drop(columns=["names_unit"])
+        write_table(wb.create_sheet("ROE_Sentences"), s,
+                    widths={"url": 40, "context": 60, "sentence": 110}, wrap={"context", "sentence"},
+                    url_cols={"url"})
+    if (TABLES / "ratecase_subsidiary_check.csv").exists():
+        write_table(wb.create_sheet("Subsidiary_Check"), pd.read_csv(TABLES / "ratecase_subsidiary_check.csv"),
+                    widths={"operating_utility": 40, "ex21_url": 60}, url_cols={"ex21_url"})
     OUT.parent.mkdir(parents=True, exist_ok=True)
     wb.save(OUT)
     print("saved", OUT)

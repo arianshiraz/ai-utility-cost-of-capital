@@ -16,6 +16,8 @@ Regulators set the return that electricity networks may earn on equity, and cust
 │   ├── 03_dc_exposure_measures.py   # exposure measures, FY2023 and FY2024
 │   ├── 05_download_rates.py         # national 10-year government bond yields
 │   ├── 06_select_ratecase_units.py  # one US rate unit per holding company (EIA-861)
+│   ├── 07_extract_ratecase_sentences.py # ROE sentences from 10-K and 10-Q filings (read in memory)
+│   ├── 08_ratecase_candidates.py    # candidate decisions per unit (unverified reading aid)
 │   └── 09_build_workbook.py         # documented Excel workbook of all data
 ├── data/
 │   ├── project_data_workbook.xlsx   # every dataset gathered, with sources
@@ -35,7 +37,7 @@ pip install -r requirements.txt
 python run_all.py
 ```
 
-Stages 02 and 03 download SEC filings, and SEC requires a contact in each request: set the environment variable `SEC_USER_AGENT` (for example "Your Name your@email") first. Without it, `run_all.py` skips those stages and reuses the committed tables. Every dataset gathered so far is documented, with sources, in `data/project_data_workbook.xlsx`.
+Stages 02, 03 and 07 read SEC filings (stage 07 reads them in memory and keeps only the extracted sentences), and SEC requires a contact in each request: set the environment variable `SEC_USER_AGENT` (for example "Your Name your@email") first. Without it, `run_all.py` skips those stages and reuses the committed tables. Every dataset gathered so far is documented, with sources, in `data/project_data_workbook.xlsx`.
 
 ## Author and license
 
