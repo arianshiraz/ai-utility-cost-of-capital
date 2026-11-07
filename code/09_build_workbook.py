@@ -53,8 +53,8 @@ def readme(wb: Workbook) -> None:
     ws.title = "README"
     lines = [
         ("Does the AI Boom Raise Utilities' Cost of Capital? Data workbook", True),
-        (f"Built {date.today().isoformat()} by code/04_build_workbook.py from the files in data/ and output/tables/.", False),
-        ("Rebuild: python code/04_build_workbook.py (after stages 01 to 03). Do not edit by hand; edit the source CSV files instead.", False),
+        (f"Built {date.today().isoformat()} by code/09_build_workbook.py from the files in data/ and output/tables/.", False),
+        ("Rebuild: python code/09_build_workbook.py (after the data stages). Do not edit by hand; edit the source CSV files instead.", False),
         ("", False),
         ("Legend", True),
         ("Blue text: values taken from a source (regulator document, SEC filing, data provider).", False),
@@ -74,6 +74,8 @@ def readme(wb: Workbook) -> None:
         ("DC_MW_Sentences", "Sentences in 10-K and 8-K filings pairing data centres with an MW or GW figure."),
         ("DC_Share_Sentences", "10-K sentences pairing data centres with a percentage (for share-of-sales coding)."),
         ("DC_SEC_Documents", "Every SEC document retrieved by the data-centre search, with links."),
+        ("Yields_Coverage", "National 10-year government bond yields (rate factor): source series, first and last date, observations, mean."),
+        ("Hub_Flags_NonUS", "Whether each non-US network firm serves a national data-centre hub, with reason and source."),
     ]
     for text, bold in lines:
         ws.append([text])
@@ -96,6 +98,9 @@ def decisions(wb: Workbook) -> None:
         ("P1 to P5", "Design proposals", "Continuous exposure to AI-era betas; cross-border comparators; exposure vs composition channels; UK placebo overlap; Germany from 2029", "2026-11-07", "Adopted"),
         ("Vintage", "Exposure vintage", "FY2023 primary (mentions per 10k words; any-mention indicator secondary); FY2024 in ranks as robustness; both reported in every table", "2026-11-07", "Decided"),
         ("Pre-spec", "Pre-specification of all tests", "Hypotheses, estimators, windows, inference and robustness fixed before any returns are analysed", "2026-11-07", "Frozen (docs/prespecification.md)"),
+        ("Index", "Market indices", "UK: FTSE All-Share (^FTAS) as pre-specified. Germany: CDAX not on Yahoo Finance, DAX used instead (substitution recorded)", "2026-11-07", "Recorded"),
+        ("Rates IT", "Italian rate factor", "No official daily Italian 10-year yield found (Bank of Italy benchmark series is monthly). Candidate: ECB daily euro-area 10-year yield on all government bonds; monthly changes correlate 0.84 with the Italian yield", "2026-11-07", "Open: needs a dated amendment"),
+        ("Exposure non-US", "Country data-centre share", "IEA publishes data-centre electricity by region, not for the UK, Germany, Spain, Italy or Canada. Hub flags coded (Hub_Flags_NonUS)", "2026-11-07", "Open: needs a dated amendment"),
     ]
     ws = wb.create_sheet("Decisions")
     write_table(ws, pd.DataFrame(rows, columns=["id", "topic", "decision", "date", "status"]),
@@ -220,6 +225,11 @@ def main() -> None:
                 widths={"sentence": 120}, wrap={"sentence"})
     write_table(wb.create_sheet("DC_SEC_Documents"), pd.read_csv(TABLES / "dc_documents.csv"),
                 widths={"url": 90}, url_cols={"url"})
+    write_table(wb.create_sheet("Yields_Coverage"), pd.read_csv(TABLES / "yields_coverage.csv"),
+                widths={"series": 80})
+    write_table(wb.create_sheet("Hub_Flags_NonUS"), pd.read_csv(CLS / "hub_flags_nonus.csv"),
+                widths={"name": 20, "reason": 80, "source_url": 60, "evidence_and_notes": 40},
+                wrap={"reason", "source_url", "evidence_and_notes"})
     OUT.parent.mkdir(parents=True, exist_ok=True)
     wb.save(OUT)
     print("saved", OUT)

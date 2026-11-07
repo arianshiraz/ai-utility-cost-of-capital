@@ -14,9 +14,13 @@ START = "2012-01-01"
 END = "2026-11-07"
 
 # Market index per country (local currency) and the AI factor candidates (USD).
-MARKET_INDEX = {"US": "^GSPC", "UK": "^FTSE", "DE": "^GDAXI", "ES": "^IBEX",
+# Pre-specification, section 1: the broadest local index available. UK: FTSE All-Share (^FTAS).
+# Germany: CDAX is not on Yahoo Finance, so the DAX is used (substitution recorded 7 Nov 2026).
+MARKET_INDEX = {"US": "^GSPC", "UK": "^FTAS", "DE": "^GDAXI", "ES": "^IBEX",
                 "IT": "FTSEMIB.MI", "CA": "^GSPTSE", "AU": "^AXJO", "JP": "^N225"}
 AI_FACTORS = ["SMH", "NVDA"]
+# Kept for comparison with the earlier download: FTSE 100.
+EXTRA_SERIES = ["^FTSE"]
 FX = {"UK": "GBPUSD=X", "DE": "EURUSD=X", "ES": "EURUSD=X", "IT": "EURUSD=X",
       "CA": "CADUSD=X", "AU": "AUDUSD=X", "JP": "JPYUSD=X"}
 

@@ -10,13 +10,13 @@ from datetime import datetime, timezone
 import pandas as pd
 import yfinance as yf
 
-from config import AI_FACTORS, END, FX, MARKET_INDEX, RAW, START, TABLES, UTILITIES
+from config import AI_FACTORS, END, EXTRA_SERIES, FX, MARKET_INDEX, RAW, START, TABLES, UTILITIES
 
 
 def main() -> None:
     utils = pd.read_csv(UTILITIES)
     tickers = sorted(set(utils["ticker"]) | set(MARKET_INDEX.values()) | set(AI_FACTORS)
-                     | set(FX.values()))
+                     | set(FX.values()) | set(EXTRA_SERIES))
     data = yf.download(tickers, start=START, end=END, auto_adjust=True, progress=False,
                        threads=True)
     prices = data["Close"].sort_index()

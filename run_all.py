@@ -16,7 +16,8 @@ import os
 # Stages 02 and 03 query SEC EDGAR, which requires a contact in the User-Agent header:
 # set the environment variable SEC_USER_AGENT (for example "Your Name your@email").
 stages = ["01_download_prices.py", "02_collect_dc_disclosures.py", "03_dc_exposure_measures.py",
-          "04_build_workbook.py"]
+          "05_download_rates.py",
+          "09_build_workbook.py"]
 if not os.environ.get("SEC_USER_AGENT"):
     print("SEC_USER_AGENT not set: skipping SEC stages 02 and 03 (existing tables are reused)")
     stages = [s for s in stages if not s.startswith(("02_", "03_"))]

@@ -1,23 +1,41 @@
 country,regulator,decision,parameter,value,unit,evidence,source_url,page_ref,note
-UK,Ofgem,RIIO-3 FD,risk-free rate (October forecast),0.0230,CPIH-real,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p45,
+US,Various,Rate cases,median authorised electric ROE (first nine months of 2025),0.097,nominal,secondary,,,Reported in web search results (industry compilation); original source not yet traced
+UK,Ofgem,RIIO-3 FD,risk-free rate (October forecast),0.023,CPIH-real,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p45,
 UK,Ofgem,RIIO-3 FD,total market return,0.069,CPIH-real,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p45,
 UK,Ofgem,RIIO-3 FD,asset beta,0.375,beta,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p55,Midpoint of range 0.30 to 0.45
 UK,Ofgem,RIIO-3 FD,debt beta,0.075,beta,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p55,
 UK,Ofgem,RIIO-3 FD,notional gearing (electricity transmission),0.55,share,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p55,
-UK,Ofgem,RIIO-3 FD,notional gearing (gas),0.60,share,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p55,
+UK,Ofgem,RIIO-3 FD,notional gearing (gas),0.6,share,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p55,
 UK,Ofgem,RIIO-3 FD,equity beta (electricity transmission),0.74,beta,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p55,
 UK,Ofgem,RIIO-3 FD,equity beta (gas),0.83,beta,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p55,
-UK,Ofgem,RIIO-3 FD,allowed return on equity (electricity transmission),0.0570,CPIH-real,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p45,
+UK,Ofgem,RIIO-3 FD,allowed return on equity (electricity transmission),0.057,CPIH-real,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p45,
 UK,Ofgem,RIIO-3 FD,allowed return on equity (gas),0.0612,CPIH-real,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p45,
 DE,BNetzA,BK4-21-0055,risk factor (equity beta),0.81,beta,primary,https://www.bundesnetzagentur.de/DE/Beschlusskammern/1_GZ/BK4-GZ/2021/BK4-21-0055/Anlagen/BK4-21-0055_Beschluss_DL_bf.pdf,p25,
 DE,BNetzA,BK4-21-0055,mean unlevered beta of foreign network operators (1-year window),0.4083,beta,primary,https://www.bundesnetzagentur.de/DE/Beschlusskammern/1_GZ/BK4-GZ/2021/BK4-21-0055/Anlagen/BK4-21-0055_Beschluss_DL_bf.pdf,p37,
 DE,BNetzA,BK4-21-0055,equity return for new assets,0.0507,nominal before corporate tax,secondary,https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/DE/2021/20211020_EKZins.html,,Press release
 DE,BNetzA,BK4-21-0055,equity return for old assets,0.0351,nominal before corporate tax,secondary,https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/DE/2021/20211020_EKZins.html,,Press release
+DE,BNetzA,BK4-21-0055,main beta window,"2020 (1 year), with 3- and 5-year checks",text,primary,https://www.bundesnetzagentur.de/DE/Beschlusskammern/1_GZ/BK4-GZ/2021/BK4-21-0055/Anlagen/BK4-21-0055_Beschluss_DL_bf.pdf,p36,Comparator table (Tabelle 2) is omitted from the accessible PDF
+DE,BNetzA,BK4-21-0055,market index for comparators,Euro Stoxx (euro-area firms); FTSE All-World sub-indices (others); daily,text,primary,https://www.bundesnetzagentur.de/DE/Beschlusskammern/1_GZ/BK4-GZ/2021/BK4-21-0055/Anlagen/BK4-21-0055_Beschluss_DL_bf.pdf,p30,
 ES,CNMC,Circular 9/2025,financial remuneration rate 2026 to 2031,0.0658,nominal pre-tax WACC,secondary,https://www.energias-renovables.com/panorama/la-cnmc-fija-una-tasa-de-retribuci-20251223,,Proposed 6.46% in July 2025; 5.58% in 2020 to 2025
-ES,CNMC,Circular 9/2025,mean unlevered beta (all comparators),0.48,beta,secondary,https://www.cnmc.es/sites/default/files/6339924.pdf,,
-ES,CNMC,Circular 9/2025,mean unlevered beta (pure comparators),0.40,beta,secondary,https://www.cnmc.es/sites/default/files/6339924.pdf,,
-CA,OEB,EB-2024-0063,base ROE,0.0900,nominal,secondary,https://www.oeb.ca/sites/default/files/OEBLtr_2026%20CoC_20251031.pdf,,ROE = 9.00% + 0.5 x (long Canada bond forecast - 3.13%) + 0.5 x (utility bond spread - 1.38%)
+ES,CNMC,Circular 9/2025 memo,data cut-off date,2023-12-31,date,primary,https://www.cnmc.es/sites/default/files/6339924.pdf,p143,Six-year window for betas therefore 2018 to 2023
+ES,CNMC,Circular 9/2025 memo,mean unlevered beta (all comparators),0.46,beta,primary,https://www.cnmc.es/sites/default/files/6339924.pdf,p114,Modigliani-Miller unlevering with each country's statutory tax rate; no debt beta
+ES,CNMC,Circular 9/2025 memo,regulatory gearing (net debt share),0.46,share,primary,https://www.cnmc.es/sites/default/files/6339924.pdf,p109,50% in the previous period
+ES,CNMC,Circular 9/2025 memo,regulatory debt-to-equity ratio,0.85,ratio,primary,https://www.cnmc.es/sites/default/files/6339924.pdf,p116 Cuadro 27,
+ES,CNMC,Circular 9/2025 memo,re-levered (equity) beta,0.75,beta,primary,https://www.cnmc.es/sites/default/files/6339924.pdf,p116 Cuadro 27,Hamada with Spanish statutory tax 25%; 0.72 in the previous period (p145)
+ES,CNMC,Circular 9/2025 memo,risk-free rate incl. QE adjustment,0.0325,nominal,primary,https://www.cnmc.es/sites/default/files/6339924.pdf,p112 Cuadro 24,Six-year mean of the Spanish 10-year bond 2018 to 2023 (1.42%) plus QE adjustment (1.83%); 2.97% in the previous period
+ES,CNMC,Circular 9/2025 memo,market risk premium,0.0498,nominal,primary,https://www.cnmc.es/sites/default/files/6339924.pdf,p118 Cuadro 29,"DMS 1900 to 2023, average of arithmetic and geometric means, EU and Norway weighted; 4.75% previously"
+ES,CNMC,Circular 9/2025 memo,expected return on equity,0.07,nominal after tax,primary,https://www.cnmc.es/sites/default/files/6339924.pdf,p119 Cuadro 31,
+IT,ARERA,Delibera 513/2024/R/com,"asset beta, electricity transmission, 2025 to 2027",0.37,beta,primary,https://arera.it/fileadmin/allegati/docs/24/513-2024-R-com.pdf,p6,
+IT,ARERA,Delibera 513/2024/R/com,"asset beta, electricity distribution and metering, 2025 to 2027",0.4,beta,primary,https://arera.it/fileadmin/allegati/docs/24/513-2024-R-com.pdf,p7,
+IT,ARERA,Delibera 513/2024/R/com,"asset beta, gas transport, 2025 to 2027",0.384,beta,primary,https://arera.it/fileadmin/allegati/docs/24/513-2024-R-com.pdf,p7,
+IT,ARERA,Delibera 513/2024/R/com,"asset beta, gas distribution and metering, 2025 to 2027",0.41,beta,primary,https://arera.it/fileadmin/allegati/docs/24/513-2024-R-com.pdf,p7,
+IT,ARERA,Delibera 513/2024/R/com,"WACC 2025, electricity transmission",0.055,real pre-tax,primary,https://arera.it/fileadmin/allegati/docs/24/513-2024-R-com.pdf,p7,
+IT,ARERA,Delibera 513/2024/R/com,"WACC 2025, electricity distribution and metering",0.056,real pre-tax,primary,https://arera.it/fileadmin/allegati/docs/24/513-2024-R-com.pdf,p7,
+IT,ARERA,Delibera 513/2024/R/com,"WACC 2025, gas transport",0.055,real pre-tax,primary,https://arera.it/fileadmin/allegati/docs/24/513-2024-R-com.pdf,p7,
+IT,ARERA,Delibera 513/2024/R/com,"WACC 2025, gas distribution and metering",0.059,real pre-tax,primary,https://arera.it/fileadmin/allegati/docs/24/513-2024-R-com.pdf,p7,
+IT,ARERA,Delibera 513/2024/R/com,gearing,unchanged,text,primary,https://arera.it/fileadmin/allegati/docs/24/513-2024-R-com.pdf,p6,Gearing values of TIWACC 2022-2027 Table 2 confirmed for the whole period; values not yet read
+IT,ARERA,Delibera 513/2024/R/com,beta validity,2025 to 2027; re-determined betas kept from 2028 for the next period,text,primary,https://arera.it/fileadmin/allegati/docs/24/513-2024-R-com.pdf,p5,
+CA,OEB,EB-2024-0063,base ROE,0.09,nominal,secondary,https://www.oeb.ca/sites/default/files/OEBLtr_2026%20CoC_20251031.pdf,,ROE = 9.00% + 0.5 x (long Canada bond forecast - 3.13%) + 0.5 x (utility bond spread - 1.38%)
 CA,OEB,EB-2024-0063,ROE for 2026,0.0911,nominal,secondary,https://www.oeb.ca/sites/default/files/OEBLtr_2026%20CoC_20251031.pdf,,
-CA,AUC,27084-D02-2023,base ROE,0.0900,nominal,secondary,https://www.auc.ab.ca/cost-of-capital-parameters-in-2024-and-beyond/,,Formula on 30-year Government of Canada yield and utility bond spread
+CA,AUC,27084-D02-2023,base ROE,0.09,nominal,secondary,https://www.auc.ab.ca/cost-of-capital-parameters-in-2024-and-beyond/,,Formula on 30-year Government of Canada yield and utility bond spread
 CA,AUC,27084-D02-2023,ROE for 2024,0.0928,nominal,secondary,https://www.auc.ab.ca/cost-of-capital-parameters-in-2024-and-beyond/,,
-US,Various,Rate cases,median authorised electric ROE (first nine months of 2025),0.0970,nominal,secondary,,,Reported in web search results (industry compilation); original source not yet traced

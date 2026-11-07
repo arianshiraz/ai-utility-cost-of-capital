@@ -14,7 +14,8 @@ Regulators set the return that electricity networks may earn on equity, and cust
 │   ├── 01_download_prices.py
 │   ├── 02_collect_dc_disclosures.py # SEC filings mentioning data centres
 │   ├── 03_dc_exposure_measures.py   # exposure measures, FY2023 and FY2024
-│   └── 04_build_workbook.py         # documented Excel workbook of all data
+│   ├── 05_download_rates.py         # national 10-year government bond yields
+│   └── 09_build_workbook.py         # documented Excel workbook of all data
 ├── data/
 │   ├── project_data_workbook.xlsx   # every dataset gathered, with sources
 │   ├── classification/              # utilities, regulator methods and parameters

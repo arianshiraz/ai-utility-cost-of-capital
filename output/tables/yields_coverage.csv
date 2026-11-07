@@ -1,0 +1,8 @@
+country,series,first,last,n_obs,mean_pct
+CA,"Bank of Canada BD.CDN.10YR.DQ.YLD, 10-year benchmark bond yield",2012-01-03,2026-11-05,3706,2.196
+DE,"Bundesbank BBSIS, Svensson term structure, 10-year residual maturity",2012-01-02,2026-11-06,3767,1.118
+ES,"Banco de Espana DPUG0B1F0ZP, 10-year state bonds, secondary market (summary indicators)",2012-01-02,2026-11-04,3788,2.398
+IT_EA_ALL,"ECB YC, euro-area 10-year spot yield, all government bonds (candidate for Italy)",2012-01-02,2026-11-05,3789,1.891
+IT_MONTHLY,"ECB IRS, Italy long-term (10-year) convergence yield, monthly (check only)",2012-01-31,2026-09-30,177,2.857
+UK,"Bank of England IUDMNPY, 10-year nominal par yield",2012-01-03,2026-11-04,3751,2.306
+US,"FRED DGS10, 10-year Treasury constant maturity",2012-01-03,2026-11-05,3713,2.669
