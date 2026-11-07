@@ -27,6 +27,13 @@
 
 ---
 
+## Additions (8 November 2026)
+
+- **UK, previous period.** RIIO-2 Final Determinations (December 2020, revised February 2021) set an asset beta of 0.349 (range 0.323 to 0.373), a debt beta of 0.075 and a notional equity beta of 0.759, with a 6.5% total market return (primary, Finance Annex pp24, 40). RIIO-3 set 0.375, so the UK asset beta rose by 0.026 between a determination estimated on pre-AI data and one estimated on windows that include 2023 to 2025.
+- **Italy, previous period.** Delibera 614/2021 (23 December 2021) set asset betas for 2022 to 2024 of 0.370 for electricity transmission and 0.400 for distribution, raising values below 0.4 by 0.02 (primary, p16). The November 2024 update (513/2024) kept the same values for 2025 to 2027, so the AI-era re-estimate left Italian electricity betas unchanged.
+- **Germany, next period.** The comparator table is missing from the accessible version of the 2021 decision. The expert report for the fifth regulatory period of gas networks (Frontier Economics, Zechner and Randl, 13 July 2026, Table 3, p31) lists twelve comparators with 3- and 5-year asset betas; six of them (National Grid, Redeia, Terna, Snam, Enagás, Italgas) are also in Ofgem's RIIO-3 set. Values in `data/classification/bnetza_frontier_2026_comparator_betas.csv`; the estimation cut-off date is still to confirm.
+- **Canada.** The OEB and AUC websites refuse automated requests, so the formula parameters remain from secondary sources. The formulas tie the return to bond yields and utility bond spreads with no beta term (secondary).
+
 ## Sources and what is known so far
 
 ### United States

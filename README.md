@@ -19,6 +19,7 @@ Regulators set the return that electricity networks may earn on equity, and cust
 │   ├── 07_extract_ratecase_sentences.py # ROE sentences from 10-K and 10-Q filings (read in memory)
 │   ├── 08_ratecase_candidates.py    # candidate decisions per unit (unverified reading aid)
 │   ├── 10_ratecase_second_pass.py   # re-checks each coded decision against its source
+│   ├── 11_rate_base_proxy.py        # FERC Form 1 net plant per US rate unit (H4)
 │   └── 09_build_workbook.py         # documented Excel workbook of all data
 ├── data/
 │   ├── project_data_workbook.xlsx   # every dataset gathered, with sources

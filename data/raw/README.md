@@ -13,4 +13,6 @@ Nothing in this folder is committed except this file. code/01_download_prices.py
 | rates/ecb_yc_ea_all_10y.csv | ECB Data Portal, YC.B.U2.EUR.4F.G_N_C.SV_C_YM.SR_10Y (euro area, all government bonds) | Candidate rate factor for Italy, pending decision |
 | rates/ecb_irs_it_monthly.csv | ECB Data Portal, IRS.M.IT.L.L40.CI.0000.EUR.N.Z (Italy, monthly) | For checking the Italian candidate only |
 | rates/rates_meta.json | URLs and download time | |
+| rates/us_fred_baa10y.csv | FRED BAA10Y (Moody's Baa corporate yield minus 10-year Treasury) | Downloaded 8 Nov 2026 by code/05_download_rates.py; spread control under Amendment 3 |
+| pudl/out_ferc1__yearly_utility_plant_summary_sched200.parquet | FERC Form 1 schedule 200 via PUDL (Catalyst Cooperative, CC-BY-4.0), https://s3.us-west-2.amazonaws.com/pudl.catalyst.coop/stable/out_ferc1__yearly_utility_plant_summary_sched200.parquet | Downloaded 8 Nov 2026; used by code/11_rate_base_proxy.py |
 | eia861/f8612023.zip | EIA-861 2023, https://www.eia.gov/electricity/data/eia861/archive/zip/f8612023.zip | Downloaded 7 Nov 2026; Sales_Ult_Cust and Delivery_Companies files used by code/06_select_ratecase_units.py |

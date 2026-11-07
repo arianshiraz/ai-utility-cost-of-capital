@@ -48,6 +48,8 @@ SOURCES = {
     "IT_MONTHLY": ("ECB IRS, Italy long-term (10-year) convergence yield, monthly (check only)",
                    "https://data-api.ecb.europa.eu/service/data/IRS/M.IT.L.L40.CI.0000.EUR.N.Z"
                    "?startPeriod=2012-01&format=csvdata", "ecb_irs_it_monthly.csv"),
+    "US_BAA10Y": ("FRED BAA10Y, Moody's seasoned Baa corporate yield minus 10-year Treasury (spread control, Amendment 3)",
+                  "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAA10Y", "us_fred_baa10y.csv"),
 }
 
 ES_MONTHS = {"ENE": 1, "FEB": 2, "MAR": 3, "ABR": 4, "MAY": 5, "JUN": 6, "JUL": 7, "AGO": 8,
@@ -55,7 +57,7 @@ ES_MONTHS = {"ENE": 1, "FEB": 2, "MAR": 3, "ABR": 4, "MAY": 5, "JUN": 6, "JUL": 
 
 
 def parse(key: str, raw: bytes) -> pd.Series:
-    if key == "US":
+    if key in ("US", "US_BAA10Y"):
         d = pd.read_csv(io.BytesIO(raw), na_values=".")
         return pd.Series(d.iloc[:, 1].values, index=pd.to_datetime(d.iloc[:, 0]))
     if key == "UK":

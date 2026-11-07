@@ -10,6 +10,11 @@ UK,Ofgem,RIIO-3 FD,equity beta (electricity transmission),0.74,beta,primary,http
 UK,Ofgem,RIIO-3 FD,equity beta (gas),0.83,beta,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p55,
 UK,Ofgem,RIIO-3 FD,allowed return on equity (electricity transmission),0.057,CPIH-real,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p45,
 UK,Ofgem,RIIO-3 FD,allowed return on equity (gas),0.0612,CPIH-real,primary,https://www.ofgem.gov.uk/sites/default/files/2025-12/RIIO-3-Final-Determinations-Finance-Annex.pdf,p45,
+UK,Ofgem,"RIIO-2 FD Finance Annex (Dec 2020, revised Feb 2021)",asset beta (midpoint),0.349,beta,primary,https://www.ofgem.gov.uk/sites/default/files/docs/2021/02/final_determinations_-_finance_annex_revised_002.pdf,"p24, p40",Range 0.323 to 0.373; RIIO-3 set 0.375
+UK,Ofgem,"RIIO-2 FD Finance Annex (Dec 2020, revised Feb 2021)",debt beta,0.075,beta,primary,https://www.ofgem.gov.uk/sites/default/files/docs/2021/02/final_determinations_-_finance_annex_revised_002.pdf,"p24, p40",
+UK,Ofgem,"RIIO-2 FD Finance Annex (Dec 2020, revised Feb 2021)",notional equity beta (midpoint),0.759,beta,primary,https://www.ofgem.gov.uk/sites/default/files/docs/2021/02/final_determinations_-_finance_annex_revised_002.pdf,"p24, p40",Range 0.694 to 0.819
+UK,Ofgem,"RIIO-2 FD Finance Annex (Dec 2020, revised Feb 2021)",total market return,0.065,CPIH-real,primary,https://www.ofgem.gov.uk/sites/default/files/docs/2021/02/final_determinations_-_finance_annex_revised_002.pdf,p24,
+UK,Ofgem,"RIIO-2 FD Finance Annex (Dec 2020, revised Feb 2021)",CAPM-implied cost of equity,0.0455,CPIH-real,primary,https://www.ofgem.gov.uk/sites/default/files/docs/2021/02/final_determinations_-_finance_annex_revised_002.pdf,p24,
 DE,BNetzA,BK4-21-0055,risk factor (equity beta),0.81,beta,primary,https://www.bundesnetzagentur.de/DE/Beschlusskammern/1_GZ/BK4-GZ/2021/BK4-21-0055/Anlagen/BK4-21-0055_Beschluss_DL_bf.pdf,p25,
 DE,BNetzA,BK4-21-0055,mean unlevered beta of foreign network operators (1-year window),0.4083,beta,primary,https://www.bundesnetzagentur.de/DE/Beschlusskammern/1_GZ/BK4-GZ/2021/BK4-21-0055/Anlagen/BK4-21-0055_Beschluss_DL_bf.pdf,p37,
 DE,BNetzA,BK4-21-0055,equity return for new assets,0.0507,nominal before corporate tax,secondary,https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/DE/2021/20211020_EKZins.html,,Press release
@@ -35,6 +40,10 @@ IT,ARERA,Delibera 513/2024/R/com,"WACC 2025, gas transport",0.055,real pre-tax,p
 IT,ARERA,Delibera 513/2024/R/com,"WACC 2025, gas distribution and metering",0.059,real pre-tax,primary,https://arera.it/fileadmin/allegati/docs/24/513-2024-R-com.pdf,p7,
 IT,ARERA,Delibera 513/2024/R/com,gearing,unchanged,text,primary,https://arera.it/fileadmin/allegati/docs/24/513-2024-R-com.pdf,p6,Gearing values of TIWACC 2022-2027 Table 2 confirmed for the whole period; values not yet read
 IT,ARERA,Delibera 513/2024/R/com,beta validity,2025 to 2027; re-determined betas kept from 2028 for the next period,text,primary,https://arera.it/fileadmin/allegati/docs/24/513-2024-R-com.pdf,p5,
+IT,ARERA,Delibera 614/2021/R/com (23 Dec 2021),"asset beta, electricity transmission, 2022 to 2024",0.370,beta,primary,https://www.arera.it/fileadmin/allegati/docs/21/614-21.pdf,p16,"Values below 0.4 raised by 0.02, capped at 0.4; unchanged by the November 2024 update (513/2024)"
+IT,ARERA,Delibera 614/2021/R/com (23 Dec 2021),"asset beta, electricity distribution, 2022 to 2024",0.400,beta,primary,https://www.arera.it/fileadmin/allegati/docs/21/614-21.pdf,p16,Unchanged by the November 2024 update (513/2024)
+IT,ARERA,Delibera 614/2021/R/com (23 Dec 2021),"asset beta, gas transport, 2022 to 2024",0.384,beta,primary,https://www.arera.it/fileadmin/allegati/docs/21/614-21.pdf,p16,
+IT,ARERA,Delibera 614/2021/R/com (23 Dec 2021),total market return,0.060,real,primary,https://www.arera.it/fileadmin/allegati/docs/21/614-21.pdf,p16,Weighted geometric and arithmetic means
 CA,OEB,EB-2024-0063,base ROE,0.09,nominal,secondary,https://www.oeb.ca/sites/default/files/OEBLtr_2026%20CoC_20251031.pdf,,ROE = 9.00% + 0.5 x (long Canada bond forecast - 3.13%) + 0.5 x (utility bond spread - 1.38%)
 CA,OEB,EB-2024-0063,ROE for 2026,0.0911,nominal,secondary,https://www.oeb.ca/sites/default/files/OEBLtr_2026%20CoC_20251031.pdf,,
 CA,AUC,27084-D02-2023,base ROE,0.09,nominal,secondary,https://www.auc.ab.ca/cost-of-capital-parameters-in-2024-and-beyond/,,Formula on 30-year Government of Canada yield and utility bond spread

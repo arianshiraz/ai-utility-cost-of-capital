@@ -104,3 +104,7 @@ Each amendment is dated and was made before any utility returns were analysed.
 - Outside the United States, exposure is the hub flag alone, coded in [`data/classification/hub_flags_nonus.csv`](../data/classification/hub_flags_nonus.csv) with a reason and source for each firm.
 - Little is lost in the tests: the H1 cross-sectional regression includes country fixed effects, which absorb any measure that varies only by country, so within-country variation comes from the hub flag in both versions.
 - Official national figures (for example the British government's data-centre electricity statistics) are reported as descriptive context only.
+
+**Amendment 3 (8 November 2026): bond-spread control in the US panel.** Section 4 specifies the change in utility bond spreads as a control. Utility bond indices (Moody's utility series, ICE BofA utility indices) are proprietary or, on FRED, limited to the last three years, so they cannot cover 2015 to 2026.
+- Main: the change in Moody's seasoned Baa corporate bond yield relative to the 10-year Treasury (FRED series BAA10Y, daily from 1986), measured over the same window as the Treasury control.
+- The original specification cannot be run with public data; this is recorded as a limitation. A utility-specific spread is used as a robustness check if a licensed series becomes available.

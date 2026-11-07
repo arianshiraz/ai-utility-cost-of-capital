@@ -6,3 +6,4 @@ IT_EA_ALL,"ECB YC, euro-area 10-year spot yield, all government bonds (Italy, Am
 IT_MONTHLY,"ECB IRS, Italy long-term (10-year) convergence yield, monthly (check only)",2012-01-31,2026-09-30,177,2.857
 UK,"Bank of England IUDMNPY, 10-year nominal par yield",2012-01-03,2026-11-04,3751,2.306
 US,"FRED DGS10, 10-year Treasury constant maturity",2012-01-03,2026-11-05,3713,2.669
+US_BAA10Y,"FRED BAA10Y, Moody's seasoned Baa corporate yield minus 10-year Treasury (spread control, Amendment 3)",2012-01-03,2026-11-05,3708,2.256

@@ -18,7 +18,7 @@ import os
 stages = ["01_download_prices.py", "02_collect_dc_disclosures.py", "03_dc_exposure_measures.py",
           "05_download_rates.py", "06_select_ratecase_units.py",
           "07_extract_ratecase_sentences.py", "08_ratecase_candidates.py",
-          "10_ratecase_second_pass.py",
+          "10_ratecase_second_pass.py", "11_rate_base_proxy.py",
           "09_build_workbook.py"]
 if not os.environ.get("SEC_USER_AGENT"):
     print("SEC_USER_AGENT not set: skipping SEC stages 02, 03, 07 and 10 (existing tables are reused)")

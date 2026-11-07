@@ -82,6 +82,9 @@ def readme(wb: Workbook) -> None:
         ("RateCase_Candidates", "Machine-extracted candidate decisions, one row per unit and ROE value; unverified reading aid."),
         ("ROE_Sentences", "Sentences in 10-K and 10-Q filings stating a return on equity that name the rate unit or its commission (reading aid)."),
         ("Subsidiary_Check", "Whether each operating utility appears in the holding company's FY2023 Exhibit 21."),
+        ("RateBase_Proxy", "Net electric utility plant (FERC Form 1) per US rate unit and year, scaled to the rate-case state; 2023 customers."),
+        ("RateBase_Stated", "Rate base stated in filings for six units, compared with the proxy (the proxy runs 1.2 to 2.7 times higher)."),
+        ("BNetzA_2026_Comparators", "Asset betas of the twelve comparators in the 2026 expert report for German network regulation."),
         ("RateCase_Second_Pass", "Automated re-check of each decision against its source (quote, ROE, order month, equity); hand review in RateCase_Decisions.second_pass."),
     ]
     for text, bold in lines:
@@ -258,6 +261,13 @@ def main() -> None:
     if (TABLES / "ratecase_subsidiary_check.csv").exists():
         write_table(wb.create_sheet("Subsidiary_Check"), pd.read_csv(TABLES / "ratecase_subsidiary_check.csv"),
                     widths={"operating_utility": 40, "ex21_url": 60}, url_cols={"ex21_url"})
+    if (TABLES / "ratecase_rate_base_proxy.csv").exists():
+        write_table(wb.create_sheet("RateBase_Proxy"), pd.read_csv(TABLES / "ratecase_rate_base_proxy.csv"),
+                    widths={"rate_unit": 40, "source": 60})
+    write_table(wb.create_sheet("RateBase_Stated"), pd.read_csv(CLS / "ratecase_rate_base_stated.csv"),
+                widths={"scope": 50, "quote": 80, "source_url": 40}, wrap={"scope", "quote"}, url_cols={"source_url"})
+    write_table(wb.create_sheet("BNetzA_2026_Comparators"), pd.read_csv(CLS / "bnetza_frontier_2026_comparator_betas.csv"),
+                widths={"company": 32, "source": 70, "source_url": 40}, wrap={"source"}, url_cols={"source_url"})
     if (TABLES / "ratecase_second_pass.csv").exists():
         write_table(wb.create_sheet("RateCase_Second_Pass"), pd.read_csv(TABLES / "ratecase_second_pass.csv"))
     OUT.parent.mkdir(parents=True, exist_ok=True)
