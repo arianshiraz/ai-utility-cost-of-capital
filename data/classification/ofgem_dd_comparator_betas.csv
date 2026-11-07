@@ -1,0 +1,10 @@
+company,ticker,country,asset_beta_2y,asset_beta_5y,asset_beta_10y
+United Utilities,UU.L,UK,0.38,0.30,0.32
+Severn Trent,SVT.L,UK,0.40,0.30,0.33
+Pennon,PNN.L,UK,0.46,0.40,0.39
+National Grid,NG.L,UK,0.35,0.31,0.36
+Enagas,ENG.MC,ES,0.29,0.29,0.36
+Snam,SRG.MI,IT,0.29,0.39,0.44
+Red Electrica (Redeia),RED.MC,ES,0.24,0.25,0.33
+Terna,TRN.MI,IT,0.26,0.37,0.43
+Italgas,IG.MI,IT,0.30,0.35,

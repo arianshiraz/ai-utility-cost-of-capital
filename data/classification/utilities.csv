@@ -1,0 +1,66 @@
+ticker,name,country,role,note
+AEE,Ameren,US,regulated_electric,
+AEP,American Electric Power,US,regulated_electric,
+CMS,CMS Energy,US,regulated_electric,
+CNP,CenterPoint Energy,US,regulated_electric,
+DTE,DTE Energy,US,regulated_electric,
+DUK,Duke Energy,US,regulated_electric,
+D,Dominion Energy,US,regulated_electric,Northern Virginia data-centre hub in its service territory
+ED,Consolidated Edison,US,regulated_electric,
+EIX,Edison International,US,regulated_electric,Wildfire liability risk (confounder)
+ES,Eversource Energy,US,regulated_electric,
+ETR,Entergy,US,regulated_electric,
+EVRG,Evergy,US,regulated_electric,
+EXC,Exelon,US,regulated_electric,Wires-only
+FE,FirstEnergy,US,regulated_electric,
+LNT,Alliant Energy,US,regulated_electric,
+NI,NiSource,US,regulated_electric,
+PCG,PG&E,US,regulated_electric,Wildfire liability risk (confounder)
+PNW,Pinnacle West,US,regulated_electric,
+PPL,PPL Corporation,US,regulated_electric,
+SO,Southern Company,US,regulated_electric,
+SRE,Sempra,US,regulated_electric,
+WEC,WEC Energy Group,US,regulated_electric,
+XEL,Xcel Energy,US,regulated_electric,
+IDA,IDACORP,US,regulated_electric,
+OGE,OGE Energy,US,regulated_electric,
+POR,Portland General Electric,US,regulated_electric,
+TXNM,TXNM Energy,US,regulated_electric,
+AVA,Avista,US,regulated_electric,
+NWE,NorthWestern Energy,US,regulated_electric,
+BKH,Black Hills,US,regulated_electric,
+OTTR,Otter Tail,US,regulated_electric,
+MGEE,MGE Energy,US,regulated_electric,
+NEE,NextEra Energy,US,regulated_electric,Large contracted generation arm (hybrid)
+AWK,American Water Works,US,placebo_water,
+WTRG,Essential Utilities,US,placebo_water,Water and gas
+ATO,Atmos Energy,US,placebo_gas,Gas distribution
+OGS,ONE Gas,US,placebo_gas,Gas distribution
+SR,Spire,US,placebo_gas,Gas distribution
+VST,Vistra,US,merchant_benchmark,Not rate-regulated; AI-exposure benchmark
+CEG,Constellation Energy,US,merchant_benchmark,Not rate-regulated; AI-exposure benchmark
+NG.L,National Grid,UK,regulated_electric,About half of assets in US (New York and Massachusetts)
+SSE.L,SSE,UK,regulated_electric,Regulated networks plus renewables
+UU.L,United Utilities,UK,placebo_water,
+SVT.L,Severn Trent,UK,placebo_water,
+PNN.L,Pennon Group,UK,placebo_water,
+EOAN.DE,E.ON,DE,regulated_electric,Mostly regulated distribution networks
+RWE.DE,RWE,DE,merchant_benchmark,Generation; not network-regulated
+RED.MC,Redeia,ES,regulated_electric,Spanish transmission operator
+ENG.MC,Enagas,ES,regulated_gas,Spanish gas transmission
+IBE.MC,Iberdrola,ES,mixed,Networks plus generation; large US and UK networks
+ELE.MC,Endesa,ES,mixed,
+TRN.MI,Terna,IT,regulated_electric,Italian transmission operator
+SRG.MI,Snam,IT,regulated_gas,Italian gas transmission
+IG.MI,Italgas,IT,regulated_gas,Gas distribution
+ENEL.MI,Enel,IT,mixed,Networks plus generation
+ACE.MI,Acea,IT,mixed,Water and electricity networks in Rome
+H.TO,Hydro One,CA,regulated_electric,Ontario transmission and distribution
+FTS.TO,Fortis,CA,regulated_electric,Mostly US and Canadian regulated networks
+EMA.TO,Emera,CA,regulated_electric,Mostly Florida (Tampa Electric)
+CU.TO,Canadian Utilities,CA,regulated_electric,Alberta
+APA.AX,APA Group,AU,regulated_gas,Gas pipelines; partly regulated
+AGL.AX,AGL Energy,AU,merchant_benchmark,Generation and retail
+ORG.AX,Origin Energy,AU,merchant_benchmark,Generation and retail
+9501.T,Tokyo Electric Power,JP,regulated_electric,
+9503.T,Kansai Electric Power,JP,regulated_electric,

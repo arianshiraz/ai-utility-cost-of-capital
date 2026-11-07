@@ -1,0 +1,24 @@
+# Downloaded data are not redistributed
+data/raw/*
+!data/raw/README.md
+data/derived/*
+!data/derived/.gitkeep
+!data/derived/exposure.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Assistant and personal notes stay local (never commit conversation or application material)
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+notes/
+*.private.md
