@@ -1,6 +1,6 @@
 # US rate-case sample and coding rule (decision D5)
 
-**Status:** draft of 7 November 2026, written before any rate-case outcome was collected. It is frozen before collection starts; later changes are logged as dated amendments.
+**Status:** frozen on 7 November 2026, before any rate-case outcome was collected. Later changes are logged as dated amendments, with results reported under both versions.
 
 ## Purpose
 

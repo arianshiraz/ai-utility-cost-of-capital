@@ -2,7 +2,7 @@
 
 Regulators set the return that electricity networks may earn on equity, and customers pay it through their bills. Many regulators base that return partly on each utility's measured market risk (beta). This project tests whether the AI investment boom has raised utilities' co-movement with technology stocks and their measured beta, whether the rise is concentrated in utilities exposed to data-centre demand, and whether it has reached allowed returns, comparing regulators that use current market betas with those that fix beta or set returns by formula.
 
-> **Status:** design frozen on 7 November 2026. Price data for 80 series across eight countries is downloaded and checked for coverage; no returns have been analysed. The design and hypotheses are in [`docs/research_design.md`](docs/research_design.md); the tests are fixed in [`docs/prespecification.md`](docs/prespecification.md) and the exposure measure in [`docs/exposure_rule.md`](docs/exposure_rule.md).
+> **Status:** design frozen on 7 November 2026. Price data for 80 series across eight countries is downloaded and checked for coverage; no returns have been analysed. The design and hypotheses are in [`docs/research_design.md`](docs/research_design.md); the tests are fixed in [`docs/prespecification.md`](docs/prespecification.md), the exposure measure in [`docs/exposure_rule.md`](docs/exposure_rule.md) and the US rate-case sample in [`docs/ratecase_rule.md`](docs/ratecase_rule.md).
 
 ## Repository layout
 

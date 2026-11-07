@@ -96,7 +96,7 @@ def decisions(wb: Workbook) -> None:
         ("D2", "Regulator methods", "Extracted for all six from primary documents where accessible (see Regulator_Methods)", "2026-11-07", "Done; US Value Line and Canada formulas still secondary"),
         ("D3", "Currency", "Local currency throughout; SMH converted at daily FX and orthogonalised to the local index", "2026-11-07", "Decided"),
         ("D4", "Data-centre exposure", "10-K text intensity (revised after collection); MW and share of sales descriptive", "2026-11-07", "Frozen (docs/exposure_rule.md)"),
-        ("D5", "US allowed returns", "All 33 US holding companies; one rate unit each (largest 2023 deliveries); every base-rate order 2015 to 2026 (docs/ratecase_rule.md)", "2026-11-07", "Decided; rule drafted, awaiting freeze"),
+        ("D5", "US allowed returns", "All 33 US holding companies; one rate unit each (largest 2023 deliveries); every base-rate order 2015 to 2026 (docs/ratecase_rule.md)", "2026-11-07", "Frozen (docs/ratecase_rule.md)"),
         ("P1 to P5", "Design proposals", "Continuous exposure to AI-era betas; cross-border comparators; exposure vs composition channels; UK placebo overlap; Germany from 2029", "2026-11-07", "Adopted"),
         ("Vintage", "Exposure vintage", "FY2023 primary (mentions per 10k words; any-mention indicator secondary); FY2024 in ranks as robustness; both reported in every table", "2026-11-07", "Decided"),
         ("Pre-spec", "Pre-specification of all tests", "Hypotheses, estimators, windows, inference and robustness fixed before any returns are analysed", "2026-11-07", "Frozen (docs/prespecification.md)"),
