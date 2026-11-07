@@ -16,6 +16,10 @@ Collection showed that megawatt pipelines are mostly published in earnings prese
   3. robustness: FY2024 intensity in ranks, because one firm (NiSource, 3.38) dominates the FY2024 values in levels.
 - **Results of the collection** (`output/tables/dc_exposure_candidates.csv`): 10 of 33 utilities mention data centres in the FY2023 10-K and 24 of 33 in FY2024; Spearman rank correlation between vintages 0.53.
 
+## Amendment 1 (7 November 2026): outside the United States
+
+The country-level measure in the original draft below (data-centre share of national demand from the IEA) cannot be built: the IEA publishes data-centre electricity use by region, and for the United States and China, but not for the United Kingdom, Germany, Spain, Italy or Canada. Outside the United States, exposure is the hub flag alone, coded in `data/classification/hub_flags_nonus.csv` with a reason and source for each firm. Two codings are judgement calls and are flagged in that file: E.ON (its subsidiary Syna serves western Frankfurt and the wider Rhine-Main area, while most of the city is served by Mainova) and Hydro One (Ontario-wide transmission that serves Toronto). The same amendment is logged in the pre-specification (Amendment 2).
+
 The sections below are the original draft, kept for the record.
 
 ## Purpose

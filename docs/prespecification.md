@@ -1,6 +1,6 @@
 # Pre-specification of tests
 
-**Status:** frozen on 7 November 2026, before any utility returns were analysed (only data coverage had been checked). Any later change is logged as a dated amendment with its reason, and results are reported under both the original and the amended specification.
+**Status:** frozen on 7 November 2026, before any utility returns were analysed (only data coverage had been checked). Two amendments, dated the same day, are in section 8. Any later change is logged as a dated amendment with its reason, and results are reported under both the original and the amended specification.
 
 ## 1. Common definitions
 
@@ -90,3 +90,17 @@ The three terms are the exposure channel, the non-AI channel and the composition
 - H3: allowed returns that do not move with the replica's AI-era contribution in the US panel, or replica contributions that are economically trivial everywhere.
 
 These outcomes would be reported as results, not as failures.
+
+## 8. Amendments
+
+Each amendment is dated and was made before any utility returns were analysed.
+
+**Amendment 1 (7 November 2026): Italian rate factor.** Section 1 specifies the daily change in the national 10-year yield, with a weekly fallback. Neither exists for Italy from an official free source: the Bank of Italy publishes its 10-year BTP benchmark yield monthly only (Infostat series MFN_BMK.M.020.922.0.EUR.210), and the ECB publishes Italian long-term yields monthly. The original specification therefore cannot be run for Italy at daily or weekly frequency.
+- Main: the ECB's daily euro-area 10-year spot yield on all government bonds (YC.B.U2.EUR.4F.G_N_C.SV_C_YM.SR_10Y). From January 2012 to September 2026, its monthly changes correlate 0.84 with the monthly Italian 10-year yield.
+- Robustness: the Bundesbank's daily German 10-year yield, whose monthly changes correlate 0.58 with the Italian yield.
+- Both versions are reported for every Italian estimate. The other five countries are unchanged.
+
+**Amendment 2 (7 November 2026): exposure outside the United States.** Section 1 and the exposure rule specify the data-centre share of national electricity demand from the IEA. The IEA publishes data-centre electricity use for regions (Europe, North America and others) and for the United States and China, but not for the United Kingdom, Germany, Spain, Italy or Canada, so the measure cannot be built from one consistent source.
+- Outside the United States, exposure is the hub flag alone, coded in [`data/classification/hub_flags_nonus.csv`](../data/classification/hub_flags_nonus.csv) with a reason and source for each firm.
+- Little is lost in the tests: the H1 cross-sectional regression includes country fixed effects, which absorb any measure that varies only by country, so within-country variation comes from the hub flag in both versions.
+- Official national figures (for example the British government's data-centre electricity statistics) are reported as descriptive context only.

@@ -7,11 +7,11 @@ Writes the files exactly as downloaded to data/raw/rates/, a tidy daily panel to
 data/derived/yields_daily.csv (country, date, yield in percent, series) and a coverage
 table to output/tables/yields_coverage.csv.
 
-Italy: the Bank of Italy publishes the 10-year BTP benchmark yield only monthly
-(Infostat MFN_BMK.M.020.922.0.EUR.210), and no official daily national series was found.
-Two candidates are kept for the decision recorded in docs/prespecification.md:
-the ECB daily euro-area 10-year yield on all government bonds (IT_EA_ALL) and the ECB
-monthly Italian long-term convergence yield (IT_MONTHLY, for checking only).
+Italy (pre-specification, Amendment 1): the Bank of Italy publishes the 10-year BTP benchmark
+yield only monthly (Infostat MFN_BMK.M.020.922.0.EUR.210), and no official daily national series
+was found. The main Italian series is the ECB daily euro-area 10-year yield on all government
+bonds (IT_EA_ALL); the German series is the robustness check; the ECB monthly Italian yield
+(IT_MONTHLY) is kept for checking only.
 """
 import io
 import json
@@ -42,7 +42,7 @@ SOURCES = {
     "CA": ("Bank of Canada BD.CDN.10YR.DQ.YLD, 10-year benchmark bond yield",
            "https://www.bankofcanada.ca/valet/observations/BD.CDN.10YR.DQ.YLD/csv?start_date=2012-01-01",
            "ca_boc_10y.csv"),
-    "IT_EA_ALL": ("ECB YC, euro-area 10-year spot yield, all government bonds (candidate for Italy)",
+    "IT_EA_ALL": ("ECB YC, euro-area 10-year spot yield, all government bonds (Italy, Amendment 1)",
                   "https://data-api.ecb.europa.eu/service/data/YC/B.U2.EUR.4F.G_N_C.SV_C_YM.SR_10Y"
                   "?startPeriod=2012-01-01&format=csvdata", "ecb_yc_ea_all_10y.csv"),
     "IT_MONTHLY": ("ECB IRS, Italy long-term (10-year) convergence yield, monthly (check only)",

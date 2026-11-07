@@ -75,9 +75,9 @@ Ireland and the Netherlands have very high data-centre shares but no listed regu
 | Item | Source | Status |
 |---|---|---|
 | Daily adjusted prices, 2012 to November 2026, 80 series (utilities, market indices, SMH, NVDA, FX) | Yahoo Finance | Downloaded 7 Nov 2026; coverage complete except later listings (Hydro One 2015, Italgas 2016, Vistra 2016, Constellation 2022) |
-| Interest rates (10-year government yields) | FRED (US), Bank of England, Bundesbank, Banco de España, Bank of Canada; ECB euro-area series as the candidate for Italy | Downloaded 7 Nov 2026 (`output/tables/yields_coverage.csv`). No official daily Italian series found; Italy open |
+| Interest rates (10-year government yields) | FRED (US), Bank of England, Bundesbank, Banco de España, Bank of Canada; ECB euro-area series as the candidate for Italy | Downloaded 7 Nov 2026 (`output/tables/yields_coverage.csv`). No official daily Italian series found; ECB euro-area series used for Italy, Bund as robustness (pre-specification, Amendment 1) |
 | Allowed returns on equity by determination | US: commission orders (the standard compilation, S&P Global RRA, is proprietary); UK: Ofgem final determinations; Germany: BNetzA; Spain: CNMC; Italy: ARERA; Ontario: OEB; Australia: AER | To do (decision D5) |
-| Data-centre exposure per utility | US: main 10-K text (FY2023, FY2024). Outside the US: hub flags (`data/classification/hub_flags_nonus.csv`) | US collected; non-US hub flags coded 7 Nov 2026. The IEA publishes no country-level data-centre share for the five non-US countries; open |
+| Data-centre exposure per utility | US: main 10-K text (FY2023, FY2024). Outside the US: hub flags (`data/classification/hub_flags_nonus.csv`) | US collected; non-US hub flags coded 7 Nov 2026. The IEA publishes no country-level data-centre share for the five non-US countries, so the hub flag is the non-US measure (pre-specification, Amendment 2) |
 
 ## 6. Method (fixed in [prespecification.md](prespecification.md))
 

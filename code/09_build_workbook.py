@@ -99,8 +99,8 @@ def decisions(wb: Workbook) -> None:
         ("Vintage", "Exposure vintage", "FY2023 primary (mentions per 10k words; any-mention indicator secondary); FY2024 in ranks as robustness; both reported in every table", "2026-11-07", "Decided"),
         ("Pre-spec", "Pre-specification of all tests", "Hypotheses, estimators, windows, inference and robustness fixed before any returns are analysed", "2026-11-07", "Frozen (docs/prespecification.md)"),
         ("Index", "Market indices", "UK: FTSE All-Share (^FTAS) as pre-specified. Germany: CDAX not on Yahoo Finance, DAX used instead (substitution recorded)", "2026-11-07", "Recorded"),
-        ("Rates IT", "Italian rate factor", "No official daily Italian 10-year yield found (Bank of Italy benchmark series is monthly). Candidate: ECB daily euro-area 10-year yield on all government bonds; monthly changes correlate 0.84 with the Italian yield", "2026-11-07", "Open: needs a dated amendment"),
-        ("Exposure non-US", "Country data-centre share", "IEA publishes data-centre electricity by region, not for the UK, Germany, Spain, Italy or Canada. Hub flags coded (Hub_Flags_NonUS)", "2026-11-07", "Open: needs a dated amendment"),
+        ("Rates IT", "Italian rate factor", "No official daily Italian 10-year yield found (Bank of Italy benchmark series is monthly). Candidate: ECB daily euro-area 10-year yield on all government bonds; monthly changes correlate 0.84 with the Italian yield. Main: ECB series; robustness: German Bund", "2026-11-07", "Adopted (pre-specification, Amendment 1)"),
+        ("Exposure non-US", "Country data-centre share", "IEA publishes data-centre electricity by region, not for the UK, Germany, Spain, Italy or Canada. Non-US exposure is the hub flag alone (Hub_Flags_NonUS)", "2026-11-07", "Adopted (pre-specification, Amendment 2)"),
     ]
     ws = wb.create_sheet("Decisions")
     write_table(ws, pd.DataFrame(rows, columns=["id", "topic", "decision", "date", "status"]),
