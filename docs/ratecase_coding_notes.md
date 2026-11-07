@@ -21,3 +21,7 @@ Notes on applying [ratecase_rule.md](ratecase_rule.md) to cases the rule does no
 **8 November 2026: Entergy Louisiana.** Returns are set when the formula rate plan is renewed or extended; these renewals are recorded and enter the panel. Annual formula plan evaluations are excluded.
 
 **8 November 2026: values read from a sentence window.** For a few rows the return sits in a sentence after the order sentence. These rows say so in `panel_note` and are rechecked first in the second pass.
+
+**8 November 2026: sources outside the extracted filings.** Where the 10-K text did not give a value, three other primary sources were used: a 10-Q outside the extraction window (Alliant, filed 1 November 2024), a subsidiary's own 10-K (NSP-Minnesota, filed 26 February 2018), and commission orders on the regulator's letterhead (Wisconsin dockets 5-UR-110 and 5-UR-111). News reports were used only to locate decisions. One example of why: press coverage attached a 9.25% return to NSP-Minnesota's 2017 order, but the company's 10-K shows the June 2017 order at 9.2%; the 9.25% belongs to the July 2023 order.
+
+**8 November 2026: settlements that keep the prior return.** A settlement that changes rates but states that the most recently approved return continues (OG&E, June 2018) is recorded with `in_panel = 0`, because the return was not re-decided.
