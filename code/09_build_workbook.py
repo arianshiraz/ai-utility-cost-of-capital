@@ -76,6 +76,8 @@ def readme(wb: Workbook) -> None:
         ("DC_SEC_Documents", "Every SEC document retrieved by the data-centre search, with links."),
         ("Yields_Coverage", "National 10-year government bond yields (rate factor): source series, first and last date, observations, mean."),
         ("Hub_Flags_NonUS", "Whether each non-US network firm serves a national data-centre hub, with reason and source."),
+        ("RateCase_Units", "The rate unit chosen for each US holding company (largest 2023 deliveries, EIA-861), with runner-up and margin."),
+        ("US_Operating_Utilities", "Each holding company's consolidated electric operating utilities, EIA numbers and rate-unit groupings."),
     ]
     for text, bold in lines:
         ws.append([text])
@@ -94,7 +96,7 @@ def decisions(wb: Workbook) -> None:
         ("D2", "Regulator methods", "Extracted for all six from primary documents where accessible (see Regulator_Methods)", "2026-11-07", "Done; US Value Line and Canada formulas still secondary"),
         ("D3", "Currency", "Local currency throughout; SMH converted at daily FX and orthogonalised to the local index", "2026-11-07", "Decided"),
         ("D4", "Data-centre exposure", "10-K text intensity (revised after collection); MW and share of sales descriptive", "2026-11-07", "Frozen (docs/exposure_rule.md)"),
-        ("D5", "US allowed returns", "Hand-collect about 20 utilities, 2015 to 2026; S&P Global RRA access would be an upgrade", "2026-11-07", "Decided"),
+        ("D5", "US allowed returns", "All 33 US holding companies; one rate unit each (largest 2023 deliveries); every base-rate order 2015 to 2026 (docs/ratecase_rule.md)", "2026-11-07", "Decided; rule drafted, awaiting freeze"),
         ("P1 to P5", "Design proposals", "Continuous exposure to AI-era betas; cross-border comparators; exposure vs composition channels; UK placebo overlap; Germany from 2029", "2026-11-07", "Adopted"),
         ("Vintage", "Exposure vintage", "FY2023 primary (mentions per 10k words; any-mention indicator secondary); FY2024 in ranks as robustness; both reported in every table", "2026-11-07", "Decided"),
         ("Pre-spec", "Pre-specification of all tests", "Hypotheses, estimators, windows, inference and robustness fixed before any returns are analysed", "2026-11-07", "Frozen (docs/prespecification.md)"),
@@ -230,6 +232,11 @@ def main() -> None:
     write_table(wb.create_sheet("Hub_Flags_NonUS"), pd.read_csv(CLS / "hub_flags_nonus.csv"),
                 widths={"name": 20, "reason": 80, "source_url": 60, "evidence_and_notes": 40},
                 wrap={"reason", "source_url", "evidence_and_notes"})
+    write_table(wb.create_sheet("RateCase_Units"), pd.read_csv(TABLES / "ratecase_units.csv"),
+                widths={"operating_utility": 45, "eia_name": 45, "runner_up": 45})
+    write_table(wb.create_sheet("US_Operating_Utilities"), pd.read_csv(CLS / "us_operating_utilities.csv"),
+                widths={"operating_utility": 40, "rate_unit": 50, "rate_unit_note": 60, "note": 50, "evidence": 50},
+                wrap={"rate_unit_note", "note", "evidence"})
     OUT.parent.mkdir(parents=True, exist_ok=True)
     wb.save(OUT)
     print("saved", OUT)

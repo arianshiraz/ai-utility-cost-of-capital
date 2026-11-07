@@ -1,0 +1,115 @@
+ticker,operating_utility,eia_utility_number,eia_name,State,mwh,customers,share_of_holding_mwh
+AEE,Ameren Illinois,56697,Ameren Illinois Company,IL,33239905.0,1216469.0,0.5231167346355777
+AEE,Union Electric (Ameren Missouri),19436,Union Electric Co - (MO),MO,30302136.0,1254162.0,0.47688326536442227
+AEP,Ohio Power,14006,Ohio Power Co,OH,44314671.0,1523794.0,0.2547489986591302
+AEP,AEP Texas (Central and North divisions),3278; 20404,AEP Texas Central Company; AEP Texas North Company,TX,39576172.0,1104878.0,0.22750908356651245
+AEP,Public Service Co of Oklahoma,15474,Public Service Co of Oklahoma,OK,18421783.0,575929.0,0.10590016053071426
+AEP,Indiana Michigan Power,9324,Indiana Michigan Power Co,IN,14596527.0,478944.0,0.08391014878912127
+AEP,Appalachian Power,733,Appalachian Power Co,VA,14041399.0,546033.0,0.08071891891115049
+AEP,Appalachian Power,733,Appalachian Power Co,WV,11326278.0,419483.0,0.0651106713403093
+AEP,Southwestern Electric Power,17698,Southwestern Electric Power Co,TX,7081384.0,190909.0,0.04070831267416576
+AEP,Southwestern Electric Power,17698,Southwestern Electric Power Co,LA,6264772.0,234806.0,0.03601390595515775
+AEP,Kentucky Power,22053,Kentucky Power Co,KY,5168345.0,162743.0,0.029710944113179184
+AEP,Wheeling Power,20521,Wheeling Power Co,WV,4805178.0,41400.0,0.027623228521292235
+AEP,Southwestern Electric Power,17698,Southwestern Electric Power Co,AR,3548497.0,126349.0,0.020399024456142924
+AEP,Indiana Michigan Power,9324,Indiana Michigan Power Co,MI,2916413.0,131670.0,0.01676540239746945
+AEP,Kingsport Power,10331,Kingsport Power Co,TN,1892831.0,49140.0,0.010881200085654704
+AVA,Avista,20169,Avista Corp,WA,5739294.0,270433.0,0.59048913638983
+AVA,Avista,20169,Avista Corp,ID,3567522.0,146014.0,0.3670456653434585
+AVA,Alaska Electric Light & Power,213,Alaska Electric Light & Power Co.,AK,411690.0,17701.0,0.04235686001803168
+AVA,Avista,20169,Avista Corp,MT,1053.0,32.0,0.00010833824867980122
+BKH,Cheyenne Light Fuel & Power,3461,Cheyenne Light Fuel & Power,WY,2118748.0,44789.0,0.36800718385439146
+BKH,Black Hills Colorado Electric,56146,"Black Hills Colorado Electric, LLC",CO,1798655.0,101100.0,0.3124099521394807
+BKH,Black Hills Power,19545,"Black Hills Power, Inc.",SD,1525880.0,73367.0,0.26503142502069094
+BKH,Black Hills Power,19545,"Black Hills Power, Inc.",WY,164110.0,2624.0,0.02850440870851285
+BKH,Black Hills Power,19545,"Black Hills Power, Inc.",MT,149962.0,40.0,0.026047030276924038
+CMS,Consumers Energy,4254,Consumers Energy Co - (MI),MI,36010976.0,1885232.0,1.0
+CNP,CenterPoint Energy Houston Electric,8901,CenterPoint Energy,TX,103861933.0,2753610.0,0.9594066580234227
+CNP,Southern Indiana Gas & Electric,17633,Southern Indiana Gas & Elec Co,IN,4394490.0,151780.0,0.04059334197657723
+D,Virginia Electric & Power,19876,Virginia Electric & Power Co,VA,92590790.0,2626220.0,0.7867165216995875
+D,Dominion Energy South Carolina,17539,"Dominion Energy South Carolina, Inc",SC,21026077.0,788721.0,0.17865234935815644
+D,Virginia Electric & Power,19876,Virginia Electric & Power Co,NC,4075831.0,126523.0,0.03463112894225604
+DTE,DTE Electric,5109,DTE Electric Company,MI,43484842.0,2270824.0,1.0
+DUK,Duke Energy Carolinas,5416,"Duke Energy Carolinas, LLC",NC,57139511.0,2186570.0,0.2728818486318882
+DUK,Duke Energy Florida,6455,"Duke Energy Florida, LLC",FL,40832186.0,1968212.0,0.19500276086298854
+DUK,Duke Energy Progress,3046,Duke Energy Progress - (NC),NC,36263803.0,1541868.0,0.1731854793273014
+DUK,Duke Energy Indiana,15470,"Duke Energy Indiana, LLC",IN,25618885.0,894157.0,0.12234841664444329
+DUK,Duke Energy Carolinas,5416,"Duke Energy Carolinas, LLC",SC,20707884.0,659239.0,0.09889489021309089
+DUK,Duke Energy Ohio,3542,Duke Energy Ohio Inc,OH,19354112.0,752890.0,0.09242966502091014
+DUK,Duke Energy Progress,3046,Duke Energy Progress - (NC),SC,5627584.0,176260.0,0.026875720466897866
+DUK,Duke Energy Kentucky,19446,Duke Energy Kentucky,KY,3848896.0,151127.0,0.01838121883247968
+ED,Consolidated Edison Co of NY,4226,Consolidated Edison Co-NY Inc,NY,52265256.0,3638088.0,0.9065023346331644
+ED,Orange & Rockland,14154,Orange & Rockland Utils Inc,NY,3930374.0,242330.0,0.06816943950263037
+ED,Rockland Electric,16213,Rockland Electric Co,NJ,1460323.0,75486.0,0.02532822586420521
+EIX,Southern California Edison,17609,Southern California Edison Co,CA,76991758.0,5259622.0,1.0
+ES,NSTAR Electric,54913,NSTAR Electric Company,MA,22584860.0,1515653.0,0.4539559394889966
+ES,Connecticut Light & Power,4176,Connecticut Light & Power Co,CT,19576770.0,1281655.0,0.3934932967266569
+ES,Public Service Co of NH,15472,Public Service Co of NH,NH,7589586.0,537201.0,0.1525507637843465
+ETR,Entergy Louisiana,11241,Entergy Louisiana LLC,LA,57677063.0,1104472.0,0.4807033090865561
+ETR,Entergy Arkansas,814,Entergy Arkansas LLC,AR,22518553.0,729550.0,0.18767847008681762
+ETR,Entergy Texas,55937,Entergy Texas Inc.,TX,21164484.0,506334.0,0.17639312691614467
+ETR,Entergy Mississippi,12685,Entergy Mississippi LLC,MS,12885232.0,460082.0,0.1073905871515681
+ETR,Entergy New Orleans,13478,"Entergy New Orleans, LLC",LA,5739361.0,209071.0,0.04783409003926441
+ETR,Entergy Arkansas,814,Entergy Arkansas LLC,TN,50.0,7.0,4.1671964909738564e-07
+EVRG,Evergy Kansas Central (incl. Evergy Kansas South),10005; 22500,"Evergy Kansas Central, Inc; Evergy Kansas South, Inc",KS,19363839.0,738636.0,0.45656101960231943
+EVRG,Evergy Missouri West,12698,Evergy Missouri West,MO,8460486.0,343879.0,0.19948152401448643
+EVRG,Evergy Metro,10000,Evergy Metro,MO,8263519.0,305816.0,0.19483743177905677
+EVRG,Evergy Metro,10000,Evergy Metro,KS,6324535.0,274161.0,0.1491200246041374
+EXC,Commonwealth Edison,4110,Commonwealth Edison Co,IL,82290221.0,4130538.0,0.4384761436369178
+EXC,PECO Energy,14940,PECO Energy Co,PA,34870804.0,1700250.0,0.18580598615039334
+EXC,Baltimore Gas & Electric,1167,Baltimore Gas & Electric Co,MD,27712371.0,1336792.0,0.14766291084715347
+EXC,Potomac Electric Power,15270,Potomac Electric Power Co,MD,12983561.0,597601.0,0.0691817531752003
+EXC,Potomac Electric Power,15270,Potomac Electric Power Co,DC,9865498.0,340371.0,0.05256743104502934
+EXC,Atlantic City Electric,963,Atlantic City Electric Co,NJ,8433017.0,569973.0,0.04493458309444289
+EXC,Delmarva Power,5027,Delmarva Power,DE,7521256.0,336431.0,0.04007634547713792
+EXC,Delmarva Power,5027,Delmarva Power,MD,3996472.0,213315.0,0.021294846573724966
+FE,"FirstEnergy Ohio utilities (Ohio Edison, CEI, Toledo Edison)",3755; 13998; 18997,Cleveland Electric Illum Co; Ohio Edison Co; The Toledo Edison Co,OH,51371894.0,2141502.0,0.36030186782873963
+FE,Jersey Central Power & Light,9726,Jersey Central Power & Lt Co,NJ,19286177.0,1163140.0,0.13526551301331577
+FE,West Penn Power,20387,West Penn Power Company,PA,18676602.0,737357.0,0.13099019836204548
+FE,Metropolitan Edison,12390,Metropolitan Edison Co,PA,13597378.0,588330.0,0.09536655765453016
+FE,Pennsylvania Electric,14711,Pennsylvania Electric Co,PA,12858132.0,584325.0,0.09018178259864211
+FE,Monongahela Power,12796,Monongahela Power Co,WV,12109678.0,396758.0,0.08493242632254508
+FE,Potomac Edison,15263,The Potomac Edison Company,MD,6555594.0,287595.0,0.04597830796207121
+FE,Pennsylvania Power,14716,Pennsylvania Power Co,PA,4430772.0,171046.0,0.03107565836531704
+FE,Potomac Edison,15263,The Potomac Edison Company,WV,3633281.0,154110.0,0.025482376231771225
+FE,Pennsylvania Electric,14711,Pennsylvania Electric Co,NY,60641.0,3887.0,0.00042531166102232086
+IDA,Idaho Power,9191,Idaho Power Co,ID,14865377.0,604230.0,0.9581299144807754
+IDA,Idaho Power,9191,Idaho Power Co,OR,649614.0,20035.0,0.0418700855192246
+LNT,Interstate Power and Light,9417,Interstate Power and Light Co,IA,13940034.0,501812.0,0.5576670308695552
+LNT,Wisconsin Power & Light,20856,Wisconsin Power & Light Co,WI,11057022.0,497000.0,0.4423329691304448
+MGEE,Madison Gas & Electric,11479,Madison Gas & Electric Co,WI,3159061.0,162729.0,1.0
+NEE,Florida Power & Light,6452,Florida Power & Light Co,FL,127522613.0,5811951.0,1.0
+NI,Northern Indiana Public Service,13756,Northern Indiana Pub Serv Co,IN,14776345.0,488841.0,1.0
+NWE,NorthWestern Energy (Montana),12825,NorthWestern Energy LLC - (MT),MT,9352017.0,402373.0,0.8422138006999044
+NWE,NorthWestern Energy (South Dakota),13809,NorthWestern Energy - (SD),SD,1721208.0,64654.0,0.15500668267338275
+NWE,NorthWestern Energy (Montana),12825,NorthWestern Energy LLC - (MT),WY,30864.0,655.0,0.0027795166267129165
+OGE,Oklahoma Gas & Electric,14063,Oklahoma Gas & Electric Co,OK,27218839.0,822878.0,0.9152566338424556
+OGE,Oklahoma Gas & Electric,14063,Oklahoma Gas & Electric Co,AR,2520185.0,69396.0,0.08474336615754438
+OTTR,Otter Tail Power,14232,Otter Tail Power Co,MN,2787333.0,63220.0,0.4828879381658514
+OTTR,Otter Tail Power,14232,Otter Tail Power Co,ND,2481712.0,59209.0,0.42994101917548116
+OTTR,Otter Tail Power,14232,Otter Tail Power Co,SD,503170.0,11910.0,0.08717104265866743
+PCG,Pacific Gas & Electric,14328,Pacific Gas & Electric Co.,CA,73315398.0,5649605.0,1.0
+PNW,Arizona Public Service,803,Arizona Public Service Co,AZ,31370312.0,1370930.0,1.0
+POR,Portland General Electric,15248,Portland General Electric Co,OR,21444938.0,928861.0,1.0
+PPL,PPL Electric Utilities,14715,PPL Electric Utilities Corp,PA,35706872.0,1481239.0,0.5020528180523807
+PPL,Kentucky Utilities,10171,Kentucky Utilities Co,KY,16804924.0,542047.0,0.23628391339784918
+PPL,Louisville Gas & Electric,11249,Louisville Gas & Electric Co,KY,10858895.0,434120.0,0.15268038140347065
+PPL,Narragansett Electric (Rhode Island Energy),13214,The Narragansett Electric Co,RI,7136765.0,505129.0,0.10034575361369091
+PPL,Kentucky Utilities,10171,Kentucky Utilities Co,VA,614288.0,27565.0,0.008637133532608537
+SO,Georgia Power,7140,Georgia Power Co,GA,84130035.0,2735271.0,0.5820886733298968
+SO,Alabama Power,195,Alabama Power Co,AL,50746188.0,1537035.0,0.35110862903444084
+SO,Mississippi Power,12686,Mississippi Power Co,MS,9655081.0,191692.0,0.06680269763566238
+SRE,San Diego Gas & Electric,16609,San Diego Gas & Electric Co,CA,16847260.0,1511430.0,1.0
+TXNM,Texas-New Mexico Power,40051,Texas-New Mexico Power Co,TX,15549316.0,272065.0,0.6166367098910341
+TXNM,Public Service Co of New Mexico,15473,Public Service Co of NM,NM,9667016.0,548019.0,0.3833632901089659
+WEC,Wisconsin Electric Power,20847,Wisconsin Electric Power Co,WI,22918893.0,1159300.0,0.6396674071202441
+WEC,Wisconsin Public Service,20860,Wisconsin Public Service Corp,WI,10817248.0,463129.0,0.30190991250479005
+WEC,Upper Michigan Energy Resources,60631,Upper Michigan Energy Resources Corp.,MI,2093249.0,37321.0,0.05842268037496592
+XEL,Northern States Power-Minnesota,13781,Northern States Power Co - Minnesota,MN,28701239.0,1357170.0,0.31379769356406517
+XEL,Public Service Co of Colorado,15466,Public Service Co of Colorado,CO,28039983.0,1569461.0,0.30656801934493483
+XEL,Southwestern Public Service,17718,Southwestern Public Service Co,TX,13427366.0,279501.0,0.1468046895620272
+XEL,Southwestern Public Service,17718,Southwestern Public Service Co,NM,10006995.0,126926.0,0.1094089335483786
+XEL,Northern States Power-Wisconsin,13780,Northern States Power Co,WI,6755086.0,259879.0,0.07385501394650269
+XEL,Northern States Power-Minnesota,13781,Northern States Power Co - Minnesota,SD,2265288.0,103230.0,0.024766949944507767
+XEL,Northern States Power-Minnesota,13781,Northern States Power Co - Minnesota,ND,2135084.0,95902.0,0.023343397640970782
+XEL,Northern States Power-Wisconsin,13780,Northern States Power Co,MI,133108.0,8932.0,0.0014553024486129533

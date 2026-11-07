@@ -1,0 +1,92 @@
+ticker,eia_utility_number,operating_utility,rate_unit,rate_unit_note,note,evidence
+AEE,56697,Ameren Illinois,Ameren Illinois,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+AEE,19436,Union Electric (Ameren Missouri),Union Electric (Ameren Missouri),,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+AEP,14006,Ohio Power,Ohio Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+AEP,733,Appalachian Power,Appalachian Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+AEP,3278,AEP Texas Central,AEP Texas (Central and North divisions),AEP Texas Central and North merged into AEP Texas Inc. in 2016; EIA still reports two numbers,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+AEP,20404,AEP Texas North,AEP Texas (Central and North divisions),AEP Texas Central and North merged into AEP Texas Inc. in 2016; EIA still reports two numbers,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+AEP,9324,Indiana Michigan Power,Indiana Michigan Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+AEP,15474,Public Service Co of Oklahoma,Public Service Co of Oklahoma,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+AEP,17698,Southwestern Electric Power,Southwestern Electric Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+AEP,22053,Kentucky Power,Kentucky Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+AEP,20521,Wheeling Power,Wheeling Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+AEP,10331,Kingsport Power,Kingsport Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+CMS,4254,Consumers Energy,Consumers Energy,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+CNP,8901,CenterPoint Energy Houston Electric,CenterPoint Energy Houston Electric,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+CNP,17633,Southern Indiana Gas & Electric,Southern Indiana Gas & Electric,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+DTE,5109,DTE Electric,DTE Electric,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+DUK,5416,Duke Energy Carolinas,Duke Energy Carolinas,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+DUK,3046,Duke Energy Progress,Duke Energy Progress,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+DUK,6455,Duke Energy Florida,Duke Energy Florida,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+DUK,15470,Duke Energy Indiana,Duke Energy Indiana,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+DUK,3542,Duke Energy Ohio,Duke Energy Ohio,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+DUK,19446,Duke Energy Kentucky,Duke Energy Kentucky,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+D,19876,Virginia Electric & Power,Virginia Electric & Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+D,17539,Dominion Energy South Carolina,Dominion Energy South Carolina,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+ED,4226,Consolidated Edison Co of NY,Consolidated Edison Co of NY,,Pike County Light & Power excluded: sold in 2016,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+ED,14154,Orange & Rockland,Orange & Rockland,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+ED,16213,Rockland Electric,Rockland Electric,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+EIX,17609,Southern California Edison,Southern California Edison,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+ES,54913,NSTAR Electric,NSTAR Electric,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+ES,4176,Connecticut Light & Power,Connecticut Light & Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+ES,15472,Public Service Co of NH,Public Service Co of NH,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+ETR,11241,Entergy Louisiana,Entergy Louisiana,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+ETR,814,Entergy Arkansas,Entergy Arkansas,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+ETR,55937,Entergy Texas,Entergy Texas,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+ETR,12685,Entergy Mississippi,Entergy Mississippi,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+ETR,13478,Entergy New Orleans,Entergy New Orleans,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+EVRG,10000,Evergy Metro,Evergy Metro,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+EVRG,22500,Evergy Kansas Central,Evergy Kansas Central (incl. Evergy Kansas South),Kansas Central and Kansas South rates set in one KCC proceeding (to verify against the docket),,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+EVRG,10005,Evergy Kansas South,Evergy Kansas Central (incl. Evergy Kansas South),Kansas Central and Kansas South rates set in one KCC proceeding (to verify against the docket),,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+EVRG,12698,Evergy Missouri West,Evergy Missouri West,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+EXC,4110,Commonwealth Edison,Commonwealth Edison,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+EXC,14940,PECO Energy,PECO Energy,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+EXC,1167,Baltimore Gas & Electric,Baltimore Gas & Electric,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+EXC,15270,Potomac Electric Power,Potomac Electric Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+EXC,5027,Delmarva Power,Delmarva Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+EXC,963,Atlantic City Electric,Atlantic City Electric,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+FE,13998,Ohio Edison,"FirstEnergy Ohio utilities (Ohio Edison, CEI, Toledo Edison)","Ohio Edison, CEI and Toledo Edison file one combined PUCO base rate case (to verify against the docket)",,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+FE,3755,Cleveland Electric Illuminating,"FirstEnergy Ohio utilities (Ohio Edison, CEI, Toledo Edison)","Ohio Edison, CEI and Toledo Edison file one combined PUCO base rate case (to verify against the docket)",,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+FE,18997,Toledo Edison,"FirstEnergy Ohio utilities (Ohio Edison, CEI, Toledo Edison)","Ohio Edison, CEI and Toledo Edison file one combined PUCO base rate case (to verify against the docket)",,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+FE,9726,Jersey Central Power & Light,Jersey Central Power & Light,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+FE,20387,West Penn Power,West Penn Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+FE,12390,Metropolitan Edison,Metropolitan Edison,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+FE,14711,Pennsylvania Electric,Pennsylvania Electric,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+FE,14716,Pennsylvania Power,Pennsylvania Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+FE,12796,Monongahela Power,Monongahela Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+FE,15263,Potomac Edison,Potomac Edison,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+LNT,9417,Interstate Power and Light,Interstate Power and Light,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+LNT,20856,Wisconsin Power & Light,Wisconsin Power & Light,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+NI,13756,Northern Indiana Public Service,Northern Indiana Public Service,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+PCG,14328,Pacific Gas & Electric,Pacific Gas & Electric,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+PNW,803,Arizona Public Service,Arizona Public Service,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+PPL,14715,PPL Electric Utilities,PPL Electric Utilities,,Narragansett Electric acquired May 2022 (now Rhode Island Energy),consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+PPL,10171,Kentucky Utilities,Kentucky Utilities,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+PPL,11249,Louisville Gas & Electric,Louisville Gas & Electric,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+PPL,13214,Narragansett Electric (Rhode Island Energy),Narragansett Electric (Rhode Island Energy),,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+SO,7140,Georgia Power,Georgia Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+SO,195,Alabama Power,Alabama Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+SO,12686,Mississippi Power,Mississippi Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+SRE,16609,San Diego Gas & Electric,San Diego Gas & Electric,,"Oncor (80% owned) is excluded: accounted for by the equity method, not consolidated",consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+WEC,20847,Wisconsin Electric Power,Wisconsin Electric Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+WEC,20860,Wisconsin Public Service,Wisconsin Public Service,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+WEC,60631,Upper Michigan Energy Resources,Upper Michigan Energy Resources,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+XEL,13781,Northern States Power-Minnesota,Northern States Power-Minnesota,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+XEL,13780,Northern States Power-Wisconsin,Northern States Power-Wisconsin,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+XEL,15466,Public Service Co of Colorado,Public Service Co of Colorado,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+XEL,17718,Southwestern Public Service,Southwestern Public Service,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+IDA,9191,Idaho Power,Idaho Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+OGE,14063,Oklahoma Gas & Electric,Oklahoma Gas & Electric,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+POR,15248,Portland General Electric,Portland General Electric,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+TXNM,15473,Public Service Co of New Mexico,Public Service Co of New Mexico,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+TXNM,40051,Texas-New Mexico Power,Texas-New Mexico Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+AVA,20169,Avista,Avista,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+AVA,213,Alaska Electric Light & Power,Alaska Electric Light & Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+NWE,12825,NorthWestern Energy (Montana),NorthWestern Energy (Montana),,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+NWE,13809,NorthWestern Energy (South Dakota),NorthWestern Energy (South Dakota),,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+BKH,19545,Black Hills Power,Black Hills Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+BKH,56146,Black Hills Colorado Electric,Black Hills Colorado Electric,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+BKH,3461,Cheyenne Light Fuel & Power,Cheyenne Light Fuel & Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+OTTR,14232,Otter Tail Power,Otter Tail Power,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+MGEE,11479,Madison Gas & Electric,Madison Gas & Electric,,,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21
+NEE,6452,Florida Power & Light,Florida Power & Light,,Gulf Power merged into FPL in 2021,consolidated electric operating subsidiaries as of 2023; to verify against each FY2023 10-K Exhibit 21

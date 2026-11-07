@@ -13,3 +13,4 @@ Nothing in this folder is committed except this file. code/01_download_prices.py
 | rates/ecb_yc_ea_all_10y.csv | ECB Data Portal, YC.B.U2.EUR.4F.G_N_C.SV_C_YM.SR_10Y (euro area, all government bonds) | Candidate rate factor for Italy, pending decision |
 | rates/ecb_irs_it_monthly.csv | ECB Data Portal, IRS.M.IT.L.L40.CI.0000.EUR.N.Z (Italy, monthly) | For checking the Italian candidate only |
 | rates/rates_meta.json | URLs and download time | |
+| eia861/f8612023.zip | EIA-861 2023, https://www.eia.gov/electricity/data/eia861/archive/zip/f8612023.zip | Downloaded 7 Nov 2026; Sales_Ult_Cust and Delivery_Companies files used by code/06_select_ratecase_units.py |
