@@ -33,3 +33,30 @@ Written 8 November 2026, before any utility returns were analysed. These notes s
 **8 November 2026, written after the H1 and H2 results were seen.** Two points about reading the results, not changes to any test.
 1. *The H2 "composition" term mostly measures the change in market variance.* The term is C_a(1/V_b − 1/V_a). The earlier window of every country contains the 2020 COVID crash, so V_a is larger than V_b and the term is positive in every country. It therefore moves with the end of COVID-era volatility rather than with AI firms entering the index. The decomposition is exact, but the label overstates what the term isolates; it is reported as "index variance (labelled composition)".
 2. *The placebo-break p-value is coarse.* Break dates a few weeks apart share most of their estimation windows, so the 1,000 placebo slopes are strongly dependent and form a few clusters (`output/figures/fig2_h1_placebo_breaks.png`). The p-value should be read as the AI-era slope's rank among a small number of effectively distinct pre-AI periods.
+
+## H3 and H4 (written 8 November 2026, before any H3 or H4 estimate)
+
+**Counterfactual returns.** On every AI-era date (from 30 November 2022):
+- exposure counterfactual: r_cf = r − (b_ai,AI − b_ai,pre) · ai_perp, where the two loadings are the firm's three-factor AI loadings in the H1 pre-AI and AI-era windows (same frequency as the replica);
+- composition counterfactual: m_cf = m − (g_AI − g_pre) · smh, where g is the slope of the local index on the raw local-currency SMH return in the same two windows;
+- both: the two together. Before 30 November 2022 the counterfactual series equal the actual ones.
+
+**UK (RIIO-3).** Ofgem estimates daily OLS equity betas against the most diversified local index and de-levers with Harris-Pringle (asset beta = (1 − g) equity beta + g × 0.075), with main weight on 10-year betas (Draft Determinations Finance Annex pp55 to 56). The annex does not publish each comparator's gearing or the data cut-off date.
+- Window: 10 years ending 31 March 2025, the date of the risk-free rate Ofgem used in the Draft Determinations (p59). Indices: FTSE All-Share (UK), IBEX 35 (Spain), FTSE MIB (Italy); the broadest indices available in the data.
+- Gearing: each comparator's gearing is backed out from Ofgem's own 10-year asset beta (Table 16) and the replica equity beta, and held fixed in the counterfactual (AI news does not change gearing). The replica check is therefore not the asset beta itself but whether the implied gearing is plausible for the company (between 0.2 and 0.75); a comparator outside that range is reported and its contribution shown separately.
+- Replica asset beta: mean over the eight comparators with 10-year betas. It is compared with the published 0.375.
+- Basis points: change in asset beta, re-levered at 55% notional gearing (electricity transmission), times the market risk premium of 4.6% (total market return 6.9% minus risk-free rate 2.3%, CPIH-real, Final Determinations p45). Domestic (four UK comparators) and foreign (four European) contributions are reported separately.
+
+**Germany (prospective, next electricity period).** The 2021 comparator table is missing, so the prospective calculation uses the twelve comparators of the July 2026 expert report and its STOXX Europe 600 or national-index columns, on 1, 3 and 5-year daily windows ending 31 October 2026, with the Vasicek adjustment omitted and no tax term in de-levering, because the report's adjustment inputs are not reproduced. The replica is compared with the report's 3 and 5-year asset betas.
+
+**Spain.** The CNMC used six years of weekly data to 31 December 2023 on 34 comparators (memo p75, Cuadro 26). If the comparator list can be mapped to price series, the same counterfactual is applied; otherwise the AI-era share of the window (one year of six) is reported as an upper bound on exposure and the replica is marked not done.
+
+**Italy.** The comparator list for the 2025 to 2027 update is in the technical report, which has not been read. Unless it is found, Italy is marked not replicated, with the observation that the November 2024 update left betas unchanged.
+
+**US panel.**
+- The holding company's Value Line-style beta at each decision date: 5 years of weekly returns ending the Friday before the order month, against the S&P 500 (Value Line uses the NYSE Composite, which is not in the data), Blume-adjusted (0.67 raw + 0.33).
+- AI-era contribution c = adjusted beta minus counterfactual adjusted beta (both counterfactuals), in beta units; it is zero for windows ending before 30 November 2022.
+- Sample: consecutive in-panel decisions of the same rate unit. Outcome: change in authorised ROE (percentage points). Regressor: change in c. Controls: change in the 10-year Treasury yield and in the Baa spread, each as the mean over the 30 days before the order month. State fixed effects as specified, and the same regression without them. Standard errors clustered by state, with a wild cluster bootstrap.
+- Reading: the coefficient is percentage points of ROE per unit of AI-era beta contribution, an effective market risk premium times the weight on CAPM. H3 predicts a positive coefficient below the full premium (about 5 to 6 points).
+
+**H4.** Basis points times the equity share of the regulated asset base. US: the stated rate base where a filing gives it, otherwise the FERC net-plant proxy as an upper bound, and per customer with 2023 customers. UK: per £1 billion of regulatory asset value at 45% equity, because RIIO-3 asset values by company were not collected.
