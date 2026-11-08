@@ -1,0 +1,11 @@
+test,slope,se,t,intercept,n,p_placebo_one_sided,p_placebo_two_sided,p_boot
+main: US d_b_ai on FY2023 mentions per 10k,-0.00300,0.02823,-0.10633,0.01140,33,0.70200,0.97500,
+US d_partialR2 on FY2023 mentions per 10k,0.01245,0.01320,0.94320,0.01974,33,,,
+placebo: indicator in pooled US regression,-0.01557,0.03591,-0.43354,0.01140,38,,,
+"secondary: all countries, within-country z exposure, country FE (wild cluster bootstrap p)",-0.00152,,-1.36908,,42,,,0.28413
+rob1: NVDA as AI factor,-0.00953,0.01750,-0.54471,-0.02697,33,,,
+rob3: excluding EIX and PCG,-0.01465,0.02487,-0.58920,0.01838,31,,,
+rob4: AI era from 2024-01-01,-0.02229,0.03552,-0.62758,0.05603,33,,,
+rob5: weekly returns,0.02795,0.03580,0.78057,0.05704,33,,,
+rob6a: FY2024 exposure in ranks,0.00140,0.00114,1.22623,-0.01277,33,,,
+rob6b: FY2023 any-mention indicator,-0.00216,0.01768,-0.12198,0.01167,33,,,

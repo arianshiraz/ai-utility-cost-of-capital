@@ -1,0 +1,10 @@
+test,slope,se,t,n,p_boot,corr
+1 US: exposure term on FY2023 mentions per 10k (HC1),0.03932,0.10172,0.38653,33,,
+"1 all countries: exposure term on within-country z exposure, country FE (wild cluster bootstrap p)",0.00890,,8.56544,42,0.35244,
+2 countries: composition term against change in index AI share (correlation; slope),-0.89950,,,6,,-0.19901
+"3 net change in beta, CA (5y weekly)",-0.25637,,,4,,
+"3 net change in beta, DE (1y daily)",-0.31030,,,1,,
+"3 net change in beta, ES (6y weekly)",-0.16558,,,1,,
+"3 net change in beta, IT (5y daily)",-0.27167,,,1,,
+"3 net change in beta, UK (10y daily)",-0.00595,,,2,,
+"3 net change in beta, US (5y weekly)",-0.46467,,,33,,
