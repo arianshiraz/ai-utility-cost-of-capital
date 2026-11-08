@@ -1,0 +1,49 @@
+ticker,order_date,c,basis,bps,rate_base,rate_base_source,equity_share,usd_per_year,usd_per_customer_year
+BKH,2023-01,0.00080,observed pass-through,0.21311,663240184.00000,FERC proxy (upper bound),0.52000,7349.78938,0.16410
+BKH,2023-01,0.00080,"upper bound, 6% premium, full CAPM weight",0.48171,663240184.00000,FERC proxy (upper bound),0.52000,16613.47011,0.37093
+AEE,2023-12,0.01762,observed pass-through,4.67620,4200000000.00000,stated,0.50000,982001.37167,0.80726
+AEE,2023-12,0.01762,"upper bound, 6% premium, full CAPM weight",10.57008,4200000000.00000,stated,0.50000,2219716.72988,1.82472
+EXC,2023-12,0.02280,observed pass-through,6.05307,29997450238.00000,FERC proxy (upper bound),0.50000,9078827.18239,2.19798
+EXC,2023-12,0.02280,"upper bound, 6% premium, full CAPM weight",13.68236,29997450238.00000,FERC proxy (upper bound),0.50000,20521788.63071,4.96831
+DUK,2023-12,0.02093,observed pass-through,5.55598,25646524105.90788,FERC proxy (upper bound),0.53000,7552059.02031,3.45384
+DUK,2023-12,0.02093,"upper bound, 6% premium, full CAPM weight",12.55875,25646524105.90788,FERC proxy (upper bound),0.53000,17070680.58769,7.80706
+PNW,2024-02,0.02835,observed pass-through,7.52634,20579312742.00000,FERC proxy (upper bound),,,
+PNW,2024-02,0.02835,"upper bound, 6% premium, full CAPM weight",17.01254,20579312742.00000,FERC proxy (upper bound),,,
+ETR,2024-08,0.04886,observed pass-through,12.97003,19154947326.00000,FERC proxy (upper bound),,,
+ETR,2024-08,0.04886,"upper bound, 6% premium, full CAPM weight",29.31746,19154947326.00000,FERC proxy (upper bound),,,
+LNT,2024-09,0.04911,observed pass-through,13.03471,8166478236.00000,FERC proxy (upper bound),0.51000,5428832.30115,10.81846
+LNT,2024-09,0.04911,"upper bound, 6% premium, full CAPM weight",29.46367,8166478236.00000,FERC proxy (upper bound),0.51000,12271337.11851,24.45405
+OGE,2024-11,0.06624,observed pass-through,17.58332,10788465226.31793,FERC proxy (upper bound),,,
+OGE,2024-11,0.06624,"upper bound, 6% premium, full CAPM weight",39.74535,10788465226.31793,FERC proxy (upper bound),,,
+AVA,2024-12,0.04951,observed pass-through,13.14309,2282153013.17676,FERC proxy (upper bound),0.48500,1454735.33441,5.37928
+AVA,2024-12,0.04951,"upper bound, 6% premium, full CAPM weight",29.70865,2282153013.17676,FERC proxy (upper bound),0.48500,3288284.97850,12.15933
+WEC,2024-12,0.05604,observed pass-through,14.87637,9653200018.00000,FERC proxy (upper bound),,,
+WEC,2024-12,0.05604,"upper bound, 6% premium, full CAPM weight",33.62656,9653200018.00000,FERC proxy (upper bound),,,
+POR,2024-12,0.05551,observed pass-through,14.73375,9485683612.00000,FERC proxy (upper bound),0.50000,6987984.24487,7.52318
+POR,2024-12,0.05551,"upper bound, 6% premium, full CAPM weight",33.30418,9485683612.00000,FERC proxy (upper bound),0.50000,15795645.48889,17.00539
+CNP,2025-03,0.07893,observed pass-through,20.95146,18717073836.00000,FERC proxy (upper bound),0.43250,16960489.16071,6.15937
+CNP,2025-03,0.07893,"upper bound, 6% premium, full CAPM weight",47.35870,18717073836.00000,FERC proxy (upper bound),0.43250,38337504.02303,13.92263
+D,2025-11,0.06204,observed pass-through,16.46684,49359478244.04317,FERC proxy (upper bound),,,
+D,2025-11,0.06204,"upper bound, 6% premium, full CAPM weight",37.22167,49359478244.04317,FERC proxy (upper bound),,,
+FE,2025-11,0.05308,observed pass-through,14.08972,4200000000.00000,stated,0.51200,3029852.67048,1.41483
+FE,2025-11,0.05308,"upper bound, 6% premium, full CAPM weight",31.84841,4200000000.00000,stated,0.51200,6848681.53525,3.19807
+EIX,2025-12,0.07770,observed pass-through,20.62378,48200000000.00000,stated,0.52000,51691446.44448,9.82798
+EIX,2025-12,0.07770,"upper bound, 6% premium, full CAPM weight",46.61801,48200000000.00000,stated,0.52000,116843389.19967,22.21517
+SRE,2025-12,0.06652,observed pass-through,17.65705,19329466946.00000,FERC proxy (upper bound),0.52000,17747673.82336,11.74231
+SRE,2025-12,0.06652,"upper bound, 6% premium, full CAPM weight",39.91202,19329466946.00000,FERC proxy (upper bound),0.52000,40116856.89932,26.54232
+IDA,2025-12,0.05896,observed pass-through,15.65046,4900000000.00000,stated,,,
+IDA,2025-12,0.05896,"upper bound, 6% premium, full CAPM weight",35.37630,4900000000.00000,stated,,,
+NWE,2025-12,0.05648,observed pass-through,14.99305,3176200000.00000,stated,0.47840,2278185.02838,5.66187
+NWE,2025-12,0.05648,"upper bound, 6% premium, full CAPM weight",33.89030,3176200000.00000,stated,0.47840,5149611.36221,12.79810
+ED,2026-01,0.05373,observed pass-through,14.26102,32692094266.00000,FERC proxy (upper bound),,,
+ED,2026-01,0.05373,"upper bound, 6% premium, full CAPM weight",32.23563,32692094266.00000,FERC proxy (upper bound),,,
+NEE,2026-01,0.08577,observed pass-through,22.76647,79364844049.00000,FERC proxy (upper bound),,,
+NEE,2026-01,0.08577,"upper bound, 6% premium, full CAPM weight",51.46134,79364844049.00000,FERC proxy (upper bound),,,
+DTE,2026-02,0.06499,observed pass-through,17.25093,27273237094.00000,FERC proxy (upper bound),,,
+DTE,2026-02,0.06499,"upper bound, 6% premium, full CAPM weight",38.99402,27273237094.00000,FERC proxy (upper bound),,,
+CMS,2026-03,0.06431,observed pass-through,17.07041,15272452626.00000,FERC proxy (upper bound),,,
+CMS,2026-03,0.06431,"upper bound, 6% premium, full CAPM weight",38.58598,15272452626.00000,FERC proxy (upper bound),,,
+AEP,2026-04,0.06068,observed pass-through,16.10625,10260111692.00000,FERC proxy (upper bound),0.50900,8411323.01019,5.51999
+AEP,2026-04,0.06068,"upper bound, 6% premium, full CAPM weight",36.40658,10260111692.00000,FERC proxy (upper bound),0.50900,19012961.63611,12.47738
+XEL,2026-07,0.06831,observed pass-through,18.13122,17203722066.39817,FERC proxy (upper bound),0.52500,16376032.45692,12.06631
+XEL,2026-07,0.06831,"upper bound, 6% premium, full CAPM weight",40.98382,17203722066.39817,FERC proxy (upper bound),0.52500,37016397.59618,27.27469

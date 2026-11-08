@@ -68,3 +68,23 @@ p3 <- ggplot(cn, aes(x = value, y = label, fill = term)) +
   theme(legend.position = "bottom", legend.direction = "vertical")
 save_both(p3, "fig3_h2_decomposition", 150, 95)
 cat("figures written\n")
+
+# Figure 4. H3: AI-era contribution to the allowed return on equity, basis points, by determination.
+uk <- tab("h3_uk_summary.csv") |> filter(counterfactual == "both") |> transmute(det = "UK RIIO-3 (10y to Mar 2025)", bps)
+es <- tab("h3_es_summary.csv") |> filter(counterfactual == "both") |> transmute(det = "Spain 2026-2031 (6y to Dec 2023)", bps)
+de <- tab("h3_de_summary.csv") |> filter(counterfactual == "both") |>
+  transmute(det = paste0("Germany, prospective (", window_years, "y to Oct 2026)"), bps)
+us <- tab("h3_us_decisions.csv") |> filter(order_date >= "2023-01") |>
+  transmute(det = "US decisions 2023-2026 (upper bound, 6% premium)", bps = c * 0.06 * 1e4)
+pts <- bind_rows(uk, es, de)
+lv <- c(rev(unique(pts$det)), "US decisions 2023-2026 (upper bound, 6% premium)")
+p4 <- ggplot() +
+  stat_halfeye(data = us |> mutate(det = factor(det, levels = lv)), aes(x = bps, y = det),
+               fill = okabe[2], alpha = 0.7, .width = c(0.5, 0.9)) +
+  geom_point(data = pts |> mutate(det = factor(det, levels = lv)), aes(x = bps, y = det),
+             size = 2.4, colour = okabe[6]) +
+  geom_vline(xintercept = 0, linewidth = 0.3) +
+  labs(x = "AI-era contribution to the allowed return on equity (basis points)", y = NULL) +
+  theme_classic(base_size = 8)
+save_both(p4, "fig4_h3_contribution_bps", 150, 70)
+cat("figure 4 written\n")

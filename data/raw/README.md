@@ -15,4 +15,6 @@ Nothing in this folder is committed except this file. code/01_download_prices.py
 | rates/rates_meta.json | URLs and download time | |
 | rates/us_fred_baa10y.csv | FRED BAA10Y (Moody's Baa corporate yield minus 10-year Treasury) | Downloaded 8 Nov 2026 by code/05_download_rates.py; spread control under Amendment 3 |
 | pudl/out_ferc1__yearly_utility_plant_summary_sched200.parquet | FERC Form 1 schedule 200 via PUDL (Catalyst Cooperative, CC-BY-4.0), https://s3.us-west-2.amazonaws.com/pudl.catalyst.coop/stable/out_ferc1__yearly_utility_plant_summary_sched200.parquet | Downloaded 8 Nov 2026; used by code/11_rate_base_proxy.py |
+| prices_de_comparators.csv | Yahoo Finance via yfinance: twelve comparators of the 2026 German expert report, STOXX Europe 600, national indices, FX | Downloaded 8 Nov 2026; used by code/17_h3_replicas.py |
+| prices_es_comparators.csv | Yahoo Finance via yfinance: 25 of the CNMC's 26 liquid comparators (EDF delisted in 2023), national indices, FX | Downloaded 8 Nov 2026; used by code/17_h3_replicas.py |
 | eia861/f8612023.zip | EIA-861 2023, https://www.eia.gov/electricity/data/eia861/archive/zip/f8612023.zip | Downloaded 7 Nov 2026; Sales_Ult_Cust and Delivery_Companies files used by code/06_select_ratecase_units.py |
