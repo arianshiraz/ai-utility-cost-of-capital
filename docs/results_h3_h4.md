@@ -73,3 +73,7 @@ The pre-specified estimate is not significant in any check, and the no-fixed-eff
 ## Files
 
 `output/tables/h3_uk_replica.csv`, `h3_uk_summary.csv`, `h3_de_replica.csv`, `h3_de_summary.csv`, `h3_es_replica.csv`, `h3_es_summary.csv`, `h3_us_decisions.csv`, `h3_us_panel.csv`, `h4_us.csv`. Code: `code/17_h3_replicas.py`, `code/18_h3_us_panel.py`, `code/16_figures.R`.
+
+## Further checks (8 November 2026, written down before they ran)
+
+Three checks were added after the first results ([analysis_notes.md](analysis_notes.md), last entries; `code/20_h3_further_checks.py`). Holding the semiconductor share of index variance, instead of the index's slope on semiconductor returns, at its pre-AI value roughly halves every contribution (UK 3.1, Spain 3.4, Germany 11.9 to 16.3 basis points) and sets the US contribution to about zero. Under the main counterfactual, month-block bootstrap intervals exclude zero, but placebo break dates in 2015 to 2021 give contributions at least as large in 87% of cases for the UK, 26% to 58% for the German windows and 5% of 585 usable breaks for Spain (`output/tables/h3_further_uncertainty.csv`, figure 5). In the US panel, the AI-era share of each decision's beta window explains 80% of the contribution across AI-era decisions, and with decision-year fixed effects the coefficient is −0.12 (standard error 2.32) (`output/tables/h3_further_us_timing.csv`).

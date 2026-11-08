@@ -1,0 +1,7 @@
+specification,coef,se,p_boot,n_pairs,r2_c_on_share_ai_decisions,r2_dc_on_dshare_pairs
+"change in c, state FE (pre-specified)",2.65440,1.73967,0.29423,53,0.80294,0.90191
+"change in c, no FE",2.51261,0.76040,0.04650,53,0.80294,0.90191
+"change in AI-era window share, state FE",0.37548,0.18471,0.19812,53,0.80294,0.90191
+"change in AI-era window share, no FE",0.33567,0.09689,0.03910,53,0.80294,0.90191
+"change in c, state FE and decision-year FE",-3.39961,6.90533,0.62296,53,0.80294,0.90191
+"change in c, decision-year FE",-0.12102,2.31752,0.95970,53,0.80294,0.90191

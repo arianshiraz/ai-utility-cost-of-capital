@@ -20,7 +20,7 @@ stages = ["01_download_prices.py", "02_collect_dc_disclosures.py", "03_dc_exposu
           "07_extract_ratecase_sentences.py", "08_ratecase_candidates.py",
           "10_ratecase_second_pass.py", "11_rate_base_proxy.py",
           "12_returns.py", "13_placebo_exposure.py", "14_h1_comovement.py", "15_h2_decomposition.py",
-          "17_h3_replicas.py", "18_h3_us_panel.py", "19_h3_robustness.py",
+          "17_h3_replicas.py", "18_h3_us_panel.py", "19_h3_robustness.py", "20_h3_further_checks.py",
           "09_build_workbook.py"]
 if not os.environ.get("SEC_USER_AGENT"):
     print("SEC_USER_AGENT not set: skipping SEC stages 02, 03, 07, 10 and 13 (existing tables are reused)")
@@ -35,3 +35,9 @@ for script in stages:
 import subprocess
 rscript = os.environ.get("RSCRIPT", "Rscript")
 subprocess.run([rscript, str(CODE / "16_figures.R")], check=True, cwd=ROOT)
+
+# Paper as Word and PDF (needs Microsoft Word on Windows; skipped otherwise)
+try:
+    runpy.run_path(str(CODE / "21_build_paper.py"), run_name="__main__")
+except Exception as e:  # no Word, or not Windows
+    print("paper build skipped:", e)

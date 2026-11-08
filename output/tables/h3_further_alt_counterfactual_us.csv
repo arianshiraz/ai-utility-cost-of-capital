@@ -1,0 +1,5 @@
+determination,counterfactual,coef,se,p_boot,median_c_ai_era
+"US panel, no fixed effects",slope,2.51261,0.76040,0.04650,0.05462
+"US panel, state fixed effects (pre-specified)",slope,2.65440,1.73967,0.29423,0.05462
+"US panel, no fixed effects",r2,-3.71200,10.65813,0.72097,-0.00042
+"US panel, state fixed effects (pre-specified)",r2,-6.25956,15.81325,0.59086,-0.00042

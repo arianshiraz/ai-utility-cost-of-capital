@@ -88,3 +88,30 @@ p4 <- ggplot() +
   theme_classic(base_size = 8)
 save_both(p4, "fig4_h3_contribution_bps", 150, 70)
 cat("figure 4 written\n")
+
+# Figure 5. H3 further checks: AI-era contribution against 1,000 placebo-break contributions, with the
+# month-block bootstrap interval, under both composition counterfactuals.
+cf_lab <- c(slope = "Index slope on SMH held at pre-AI value (main)",
+            r2 = "SMH share of index variance held at pre-AI value")
+dr <- tab("h3_further_placebo_draws.csv") |> mutate(cf = factor(cf_lab[counterfactual], levels = cf_lab))
+un <- tab("h3_further_uncertainty.csv") |> mutate(cf = factor(cf_lab[counterfactual], levels = cf_lab))
+lv5 <- rev(c("UK RIIO-3", "Spain 2026-2031", "Germany, prospective, 1y", "Germany, prospective, 3y",
+             "Germany, prospective, 5y"))
+p5 <- ggplot(dr |> mutate(determination = factor(determination, levels = lv5)), aes(x = bps, y = determination)) +
+  stat_halfeye(fill = "grey70", alpha = 0.8, .width = c(0.66, 0.9), point_interval = median_qi,
+               normalize = "groups") +
+  geom_errorbarh(data = un |> mutate(determination = factor(determination, levels = lv5)),
+                 aes(xmin = boot_p2_5, xmax = boot_p97_5, y = determination), inherit.aes = FALSE,
+                 height = 0.25, colour = okabe[6], position = position_nudge(y = -0.2)) +
+  geom_point(data = un |> mutate(determination = factor(determination, levels = lv5)),
+             aes(x = bps, y = determination), inherit.aes = FALSE, colour = okabe[6], size = 2.2,
+             position = position_nudge(y = -0.2)) +
+  geom_vline(xintercept = 0, linewidth = 0.3) +
+  coord_cartesian(xlim = c(-35, 75)) +
+  facet_wrap(~cf, ncol = 1) +
+  labs(x = "Contribution to the allowed return on equity (basis points)
+Grey: 1,000 placebo breaks, 2015 to 2021. Orange: AI era, with 95% bootstrap interval",
+       y = NULL) +
+  theme_classic(base_size = 8)
+save_both(p5, "fig5_h3_placebo_bootstrap", 170, 120)
+cat("figure 5 written\n")

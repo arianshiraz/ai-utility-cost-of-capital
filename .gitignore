@@ -22,3 +22,6 @@ CLAUDE.local.md
 .claude/
 notes/
 *.private.md
+
+# Word version of the paper stays local; the PDF is committed
+paper/*.docx
