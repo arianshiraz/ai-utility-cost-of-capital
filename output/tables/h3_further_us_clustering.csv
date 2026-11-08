@@ -1,0 +1,5 @@
+spec,cluster,n_clusters,coef,se,p_boot
+no fixed effects,state,18,2.51261,0.76040,0.04650
+no fixed effects,utility,22,2.51261,0.83066,0.01320
+state fixed effects (pre-specified),state,18,2.65440,1.73967,0.29423
+state fixed effects (pre-specified),utility,22,2.65440,1.51123,0.07991

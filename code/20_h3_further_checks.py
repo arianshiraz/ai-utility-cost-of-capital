@@ -317,9 +317,49 @@ def slope_trend():
     print(out.to_string(index=False))
 
 
+def us_cluster_by_utility():
+    """Reporting addition (analysis notes, 8 November 2026): the US panel with clustering by utility as in the
+    pre-specification, next to the state clustering used for the main results."""
+    us.rep.loadings, us.rep.counterfactual = US_ORIG
+    _, D = us.main(write=False)
+    P = D.sort_values(["ticker", "date"]).copy()
+    for col in ("roe", "c", "t10", "baa"):
+        P[f"d_{col}"] = P.groupby("ticker")[col].diff()
+    P = P.dropna(subset=["d_roe"])
+    base = np.column_stack([np.ones(len(P)), P.d_c, P.d_t10, P.d_baa])
+    FE = pd.get_dummies(P.state, drop_first=True).astype(float).values
+    rows = []
+    for spec, X in (("no fixed effects", base), ("state fixed effects (pre-specified)", np.column_stack([base, FE]))):
+        for name, cl in (("state", P.state.values), ("utility", P.ticker.values)):
+            b, se = us.cluster_se(X, P.d_roe.values, cl)
+            _, _, pb = h1.webb_boot(X, P.d_roe.values, cl, 1)
+            rows.append({"spec": spec, "cluster": name, "n_clusters": len(np.unique(cl)), "coef": b[1], "se": se[1],
+                         "p_boot": pb})
+    out = pd.DataFrame(rows)
+    out.to_csv(TABLES / "h3_further_us_clustering.csv", index=False, float_format="%.5f")
+    print(out.round(4).to_string(index=False))
+
+
+def uk_end_dates(D):
+    """Reporting addition (analysis notes, 8 November 2026): the UK contribution for other window end dates."""
+    x = [d for d in D if d["name"] == "UK RIIO-3"][0]
+    Ls = main_loadings(x)
+    rows = []
+    for end in ("2024-12-31", "2025-03-31", "2025-09-30"):
+        e = pd.Timestamp(end)
+        st = e - pd.DateOffset(years=10)
+        rows.append({"window_end": end, "bps_slope_held": bps(x, Ls, AI_DATE, "2100-01-01", st, e, "slope"),
+                     "bps_variance_share_held": bps(x, Ls, AI_DATE, "2100-01-01", st, e, "r2")})
+    out = pd.DataFrame(rows)
+    out.to_csv(TABLES / "h3_further_uk_end_dates.csv", index=False, float_format="%.5f")
+    print(out.round(3).to_string(index=False))
+
+
 if __name__ == "__main__":
     D = build()
     check1(D)
     check2(D)
     check3()
     slope_trend()
+    us_cluster_by_utility()
+    uk_end_dates(D)
