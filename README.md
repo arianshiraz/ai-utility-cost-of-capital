@@ -2,7 +2,7 @@
 
 Regulators set the return that electricity networks may earn on equity, and customers pay it through their bills. Many regulators base that return partly on each utility's measured market risk (beta). This project tests whether the AI investment boom has raised utilities' co-movement with technology stocks and their measured beta, whether the rise is concentrated in utilities exposed to data-centre demand, and whether it has reached allowed returns, comparing regulators that use current market betas with those that fix beta or set returns by formula.
 
-> **Status:** design frozen on 7 November 2026. Price data for 80 series across eight countries is downloaded and checked for coverage; no returns have been analysed. The design and hypotheses are in [`docs/research_design.md`](docs/research_design.md); the tests are fixed in [`docs/prespecification.md`](docs/prespecification.md), the exposure measure in [`docs/exposure_rule.md`](docs/exposure_rule.md) and the US rate-case sample in [`docs/ratecase_rule.md`](docs/ratecase_rule.md).
+> **Status:** design frozen on 7 November 2026; first results for H1 and H2 on 8 November 2026 ([results](docs/results_h1_h2.md)). Utilities with more data-centre exposure did not become more correlated with AI stocks, and regulator-style betas fell in five of six countries. H3 and H4 (pass-through to allowed returns and bills) are next. The tests are fixed in [`docs/prespecification.md`](docs/prespecification.md), the exposure measure in [`docs/exposure_rule.md`](docs/exposure_rule.md) and the US rate-case sample in [`docs/ratecase_rule.md`](docs/ratecase_rule.md).
 
 ## Repository layout
 
@@ -20,6 +20,11 @@ Regulators set the return that electricity networks may earn on equity, and cust
 │   ├── 08_ratecase_candidates.py    # candidate decisions per unit (unverified reading aid)
 │   ├── 10_ratecase_second_pass.py   # re-checks each coded decision against its source
 │   ├── 11_rate_base_proxy.py        # FERC Form 1 net plant per US rate unit (H4)
+│   ├── 12_returns.py                # daily and weekly returns and factors
+│   ├── 13_placebo_exposure.py       # FY2023 exposure for US water and gas placebos
+│   ├── 14_h1_comovement.py          # H1 tests, placebo breaks, robustness
+│   ├── 15_h2_decomposition.py       # H2 beta decomposition
+│   ├── 16_figures.R                 # figures (tidyplots, ggdist)
 │   └── 09_build_workbook.py         # documented Excel workbook of all data
 ├── data/
 │   ├── project_data_workbook.xlsx   # every dataset gathered, with sources

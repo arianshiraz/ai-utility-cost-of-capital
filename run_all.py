@@ -19,10 +19,18 @@ stages = ["01_download_prices.py", "02_collect_dc_disclosures.py", "03_dc_exposu
           "05_download_rates.py", "06_select_ratecase_units.py",
           "07_extract_ratecase_sentences.py", "08_ratecase_candidates.py",
           "10_ratecase_second_pass.py", "11_rate_base_proxy.py",
+          "12_returns.py", "13_placebo_exposure.py", "14_h1_comovement.py", "15_h2_decomposition.py",
           "09_build_workbook.py"]
 if not os.environ.get("SEC_USER_AGENT"):
-    print("SEC_USER_AGENT not set: skipping SEC stages 02, 03, 07 and 10 (existing tables are reused)")
-    stages = [s for s in stages if not s.startswith(("02_", "03_", "07_", "10_"))]
+    print("SEC_USER_AGENT not set: skipping SEC stages 02, 03, 07, 10 and 13 (existing tables are reused)")
+    stages = [s for s in stages if not s.startswith(("02_", "03_", "07_", "10_", "13_"))]
 for script in stages:
+    if script.endswith(".R"):
+        continue
     print(f"== {script}")
     runpy.run_path(str(CODE / script), run_name="__main__")
+
+# Figures: R script, run after the Python stages
+import subprocess
+rscript = os.environ.get("RSCRIPT", "Rscript")
+subprocess.run([rscript, str(CODE / "16_figures.R")], check=True, cwd=ROOT)
