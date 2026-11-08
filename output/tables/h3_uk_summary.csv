@@ -1,0 +1,4 @@
+counterfactual,replica_asset_beta,published_asset_beta,d_asset_beta,of_which_domestic,of_which_foreign,d_equity_beta_notional,bps,gbp_per_bn_rav_per_year
+exposure,0.37000,0.37500,-0.00000,-0.00000,-0.00000,-0.00001,-0.00347,-156.27883
+composition,0.37000,0.37500,0.00604,0.00351,0.00253,0.01343,6.17644,277939.97843
+both,0.37000,0.37500,0.00595,0.00351,0.00245,0.01323,6.08588,273864.66524

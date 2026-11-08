@@ -1,0 +1,5 @@
+counterfactual,unlevered_beta,relevered_beta,published_relevered_beta,cnmc_mean_unlevered_same_firms,d_unlevered_beta,d_relevered_beta,bps
+replica,0.47767,0.78219,0.75000,0.46240,,,
+exposure,,,,,0.00040,0.00065,0.32533
+composition,,,,,0.00817,0.01338,6.66090
+both,,,,,0.00778,0.01275,6.34841

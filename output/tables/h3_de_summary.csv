@@ -1,0 +1,10 @@
+window_years,counterfactual,n_comparators_used,d_asset_beta,d_equity_beta_notional,bps
+1,exposure,6,-0.00203,-0.00508,-1.88074
+1,composition,6,0.04100,0.10250,37.92537
+1,both,6,0.03254,0.08134,30.09579
+3,exposure,6,0.00014,0.00036,0.13396
+3,composition,6,0.04152,0.10381,38.40812
+3,both,6,0.03747,0.09367,34.65962
+5,exposure,12,-0.00002,-0.00004,-0.01651
+5,composition,12,0.02542,0.06354,23.50918
+5,both,12,0.02392,0.05980,22.12528
