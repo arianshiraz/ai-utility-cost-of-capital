@@ -14,7 +14,7 @@ The project asks two linked questions:
 
 ## 2. Stakes for consumers and regulators
 
-- The allowed return is one of the largest single parameters in a network bill. Dunkle Werner and Jarvis (Energy Institute at Haas WP 329R) estimate that US allowed returns above the cost of capital cost consumers about $7 billion a year, and Rode and Fischbeck (2019) document a rising premium of allowed returns over benchmarks.
+- The allowed return is one of the largest single parameters in a network bill. Dunkle Werner and Jarvis (2026, *Journal of Public Economics*) estimate that US allowed returns above capital-cost benchmarks cost consumers an average of $7 billion a year, and Rode and Fischbeck (2019) document a rising premium of allowed returns over benchmarks.
 - A financial channel from AI to bills would reach households who never see a data centre, and would be invisible in studies of physical load and wholesale prices.
 - Regulators and consumer advocates can act on it: by choosing beta estimation windows and comparator sets, or by excluding AI-driven co-movement as non-diversifiable risk that the network does not bear.
 
@@ -133,10 +133,15 @@ In the DeepSeek study, regulated US utilities loaded negatively on the orthogona
 
 | Reference | Role | Verified |
 |---|---|---|
-| Rode, D. C., & Fischbeck, P. S. (2019). Regulated equity returns: A puzzle. *Energy Policy*, 133, 110891. | Allowed-return premium over benchmarks has risen for decades | Yes |
-| Dunkle Werner, K., & Jarvis, S. Rate of Return Regulation Revisited. Energy Institute at Haas WP 329R (revised 2025). | Allowed returns adjust asymmetrically; excess cost about $7 billion a year to US consumers | Yes (figures differ across versions) |
+| Rode, D. C., & Fischbeck, P. S. (2019). Regulated equity returns: A puzzle. *Energy Policy*, 133, 110891. | Large and growing premium of allowed returns over the riskless rate across nearly four decades of US electric rate cases | Yes (abstract rechecked 8 Nov 2026) |
+| Dunkle Werner, K., & Jarvis, S. (2026). Rate of return regulation revisited. *Journal of Public Economics*, 259, 105654. | Allowed returns adjust asymmetrically; excess cost averaging $7 billion a year to US consumers (published abstract) | Yes (8 Nov 2026; earlier working-paper versions give other ranges) |
 | Diebold, F. X., & Yilmaz, K. (2012). Better to give than to receive: Predictive directional measurement of volatility spillovers. *International Journal of Forecasting*, 28(1), 57 to 66. | Spillover index | Yes |
 | Van Nieuwerburgh, S. (2026). Financing the AI Buildout. *Brookings Papers on Economic Activity* conference draft. | Rolling betas of data-centre REITs; nothing on utilities or rate cases | Yes (text read) |
-| Blume, M. E. (1971). On the assessment of risk. *Journal of Finance*, 26(1). | Beta adjustment used in rate-case testimony | Not yet |
+| Blume, M. E. (1971). On the assessment of risk. *Journal of Finance*, 26(1), 1 to 10. | Beta adjustment used in rate-case testimony | Yes (8 Nov 2026) |
+| Vasicek, O. A. (1973). A note on using cross-sectional information in Bayesian estimation of security betas. *Journal of Finance*, 28(5), 1233 to 1239. | BNetzA's beta adjustment | Yes (8 Nov 2026) |
+| Hamada, R. S. (1972). The effect of the firm's capital structure on the systematic risk of common stocks. *Journal of Finance*, 27(2), 435 to 452. | Re-levering (CNMC, ARERA) | Yes (8 Nov 2026) |
+| Harris, R. S., & Pringle, J. J. (1985). Risk-adjusted discount rates: Extensions from the average-risk case. *Journal of Financial Research*, 8(3), 237 to 244. | De-levering with a debt beta (Ofgem) | Yes (8 Nov 2026) |
+| Roll, R. (1977). A critique of the asset pricing theory's tests Part I. *Journal of Financial Economics*, 4(2), 129 to 176. | Beta depends on the market proxy | Yes (8 Nov 2026) |
+| Webb, M. D. (2023). Reworking wild bootstrap-based inference for clustered errors. *Canadian Journal of Economics*, 56(3), 839 to 858. | Wild cluster bootstrap weights | Yes (8 Nov 2026) |
 
 **Novelty check (7 November 2026).** Web and Scholar searches found no study linking AI exposure to utilities' measured beta or allowed returns.

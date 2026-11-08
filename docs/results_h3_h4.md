@@ -22,7 +22,7 @@ For each determination, the regulator's beta was rebuilt from its own comparator
 
 ## US rate cases: no significant pass-through in the pre-specified model, and the design cannot separate it from the post-2022 rise in allowed returns
 
-For 85 US decisions, the holding company's Value Line-style beta was rebuilt at each order date (5 years of weekly data, Blume-adjusted). At the 32 decisions from 2023 on, the AI-era contribution averages +0.046 in adjusted-beta units (range 0.001 to 0.086), almost all through the index channel (−0.002 exposure, +0.045 composition).
+For 85 US decisions, the holding company's beta was rebuilt at each order date like a Value Line beta (5 years of weekly data, two-thirds weight on the raw beta), but against the S&P 500 rather than Value Line's NYSE Composite. At the 32 decisions from 2023 on, the AI-era contribution averages +0.046 in adjusted-beta units (range 0.001 to 0.086), almost all through the index channel (−0.001 exposure, +0.045 composition).
 
 Across 53 pairs of consecutive decisions in 18 states, the change in authorised ROE on the change in this contribution, controlling for the 10-year Treasury yield and the Baa spread:
 

@@ -2,7 +2,7 @@
 
 Regulators set the return that electricity networks may earn on equity, and customers pay it through their bills. Many regulators base that return partly on each utility's measured market risk (beta). This project tests whether the AI investment boom has changed utilities' co-movement with AI stocks and their measured beta, whether any change is concentrated in utilities exposed to data-centre demand, and whether it has reached allowed returns in the US, the UK, Germany, Spain, Italy and Canada.
 
-> **Status:** working paper draft, 8 November 2026: [PDF](paper/ai_utility_cost_of_capital.pdf) ([source](docs/paper.md)). The tests were frozen before any utility returns were analysed ([`docs/prespecification.md`](docs/prespecification.md)); the exposure measure is fixed in [`docs/exposure_rule.md`](docs/exposure_rule.md) and the US rate-case sample in [`docs/ratecase_rule.md`](docs/ratecase_rule.md). Checks added after the first results are dated in [`docs/analysis_notes.md`](docs/analysis_notes.md). Detailed results: [H1 and H2](docs/results_h1_h2.md), [H3 and H4](docs/results_h3_h4.md).
+> **Status:** working paper draft, 8 November 2026: [PDF](paper/ai_utility_cost_of_capital.pdf) ([source](docs/paper.md)). The tests were frozen before any utility returns were analysed ([`docs/prespecification.md`](docs/prespecification.md)); the exposure measure is fixed in [`docs/exposure_rule.md`](docs/exposure_rule.md) and the US rate-case sample in [`docs/ratecase_rule.md`](docs/ratecase_rule.md). Checks added after the first results are dated in [`docs/analysis_notes.md`](docs/analysis_notes.md). Detailed results: [H1 and H2](docs/results_h1_h2.md), [H3 and H4](docs/results_h3_h4.md). Citations, regulatory facts and numbers were checked against their sources on 8 November 2026 ([`docs/verification_log.md`](docs/verification_log.md)).
 
 ## Research question
 
@@ -10,7 +10,7 @@ In a CAPM-based determination, the allowed return on equity moves with the beta 
 
 ## Result 1: exposed utilities did not become more tied to AI stocks
 
-Across 33 US regulated electric utilities, the change in each utility's loading on a semiconductor factor (SMH, orthogonalised to the market) between 2017 to 2022 and 2023 to 2026 shows no detectable relation to data-centre exposure in its FY2023 annual report: the slope is −0.003 per mention per 10,000 words (standard error 0.028; 95% interval about −0.06 to +0.05). In 70% of 1,000 placebo break dates between 2015 and 2021 the slope is at least as large. Regulated utilities load at about −0.27 on the AI factor in both periods; merchant generators moved from −0.32 to +0.46.
+Across 33 US regulated electric utilities, the change in each utility's loading on a semiconductor factor (SMH, orthogonalised to the market) between 2017 to 2022 and 2023 to 2026 shows no detectable relation to data-centre exposure in its FY2023 annual report: the slope is −0.003 per mention per 10,000 words (standard error 0.028; 95% interval about −0.06 to +0.05). In 70% of 1,000 placebo break dates between 2015 and 2021 the slope is at least as large. Regulated utilities load at about −0.28 on the AI factor before 2023 and −0.27 after; merchant generators moved from −0.32 to +0.46.
 
 ![Change in AI loading against data-centre exposure](output/figures/fig1_h1_exposure_scatter.png)
 
