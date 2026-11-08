@@ -39,6 +39,31 @@ The pre-specified estimate is not distinguishable from zero. Both estimates sit 
 - **US, latest AI-era decision per unit.** With the observed coefficient (not significant), the median is 15 bp, $7.3 million a year and $5.60 per customer a year (maximum $12). At a 6% premium with full CAPM weight, an upper bound, the median is 34 bp, $16 million a year and $12.60 per customer (maximum $27). Rate base is the stated figure for six units and the FERC net-plant proxy, which overstates by about 1.2 to 2.7 times, for the rest.
 - **Spain and Germany.** Basis points only; regulated asset bases were not collected.
 
+## Robustness
+
+Five of the seven pre-specified checks apply to H3 (which ones, and why, was recorded before they ran). Basis points on the allowed return, "both" counterfactual (`output/tables/h3_robustness.csv`):
+
+| Determination | Main | NVDA instead of SMH | USD-based | AI era from 2024 | National Grid half US |
+|---|---|---|---|---|---|
+| UK RIIO-3 | 6.1 | 1.9 | 5.4 | 4.5 | 8.4 |
+| Spain 2026 to 2031 | 6.3 | 2.9 | 8.3 | 0 (window ends 2023) | n/a |
+| Germany, prospective, 1 year | 30.1 | 10.2 | 32.1 | 32.1 | n/a |
+| Germany, prospective, 3 years | 34.7 | 14.4 | 35.3 | 37.5 | n/a |
+| Germany, prospective, 5 years | 22.1 | 8.9 | 19.0 | 21.6 | n/a |
+
+The contribution is positive in every case except Spain under the 2024 start, where it is zero by construction. Its size depends on the AI factor: with NVDA in place of the semiconductor index it falls by half to two thirds, because the indices' co-movement with NVDA changed less than with SMH.
+
+US panel, coefficient on the change in AI-era contribution (bootstrap p in brackets):
+
+| Check | State fixed effects (pre-specified) | No fixed effects |
+|---|---|---|
+| Main | 2.65 (0.29) | 2.51 (0.05) |
+| NVDA instead of SMH | 9.14 (0.31) | 8.61 (0.07) |
+| AI era from 2024 | 1.94 (0.37) | 2.06 (0.10) |
+| Excluding Edison and PG&E | 1.00 (0.74) | 1.87 (0.16) |
+
+The pre-specified estimate is not significant in any check, and the no-fixed-effects estimate, borderline in the main run, is not significant in any check either. The NVDA coefficient is larger because the NVDA-based contribution is smaller (median 0.015 against 0.055), so the same ROE changes divide by a smaller number.
+
 ## What these results do not show
 
 - They do not show that AI raised utilities' cost of capital through their own data-centre exposure: that channel is close to zero in every country.

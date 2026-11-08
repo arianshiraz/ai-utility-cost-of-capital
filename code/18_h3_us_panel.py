@@ -38,12 +38,14 @@ def cluster_se(X, y, cl):
     return b, np.sqrt(np.diag(V))
 
 
-def main() -> None:
+def main(exclude=(), write=True):
+    """Panel and H4. exclude: tickers dropped (robustness check 3); write=False returns results only."""
     wk = pd.read_parquet(DERIVED / "returns_weekly.parquet")
-    wk = wk[wk.country == "US"]
+    wk = wk[(wk.country == "US") & ~wk.ticker.isin(exclude)]
     y = pd.read_csv(DERIVED / "yields_daily.csv", parse_dates=["date"]).pivot_table(index="date", columns="country", values="yield_pct")
     dec = pd.read_csv(CLS / "ratecase_decisions.csv", dtype=str).fillna("")
-    dec = dec[(dec.in_panel == "1") & dec.order_date.str.match(r"^\d{4}-\d{2}$") & (dec.roe_authorised_pct != "")].copy()
+    dec = dec[(dec.in_panel == "1") & dec.order_date.str.match(r"^\d{4}-\d{2}$") & (dec.roe_authorised_pct != "")
+              & ~dec.ticker.isin(exclude)].copy()
     dec["date"] = pd.to_datetime(dec.order_date + "-01")
     dec["roe"] = dec.roe_authorised_pct.astype(float)
     cache, rows, dropped = {}, [], []
@@ -75,7 +77,8 @@ def main() -> None:
                      "t10": y["US"].loc[win[0]:win[1]].mean(), "baa": y["US_BAA10Y"].loc[win[0]:win[1]].mean(),
                      "weeks": len(w)})
     D = pd.DataFrame(rows).sort_values(["ticker", "date"])
-    D.to_csv(TABLES / "h3_us_decisions.csv", index=False, float_format="%.5f")
+    if write:
+        D.to_csv(TABLES / "h3_us_decisions.csv", index=False, float_format="%.5f")
     P = D.copy()
     for col in ("roe", "c", "t10", "baa"):
         P[f"d_{col}"] = P.groupby("ticker")[col].diff()
@@ -94,6 +97,8 @@ def main() -> None:
     res.append({"spec": "state fixed effects (pre-specified)", "coef_d_c": b[1], "se": se[1], "t": b[1] / se[1],
                 "p_boot": pb, "coef_d_t10": b[2], "coef_d_baa": b[3], "n_pairs": len(P), "n_states": len(np.unique(cl))})
     R = pd.DataFrame(res)
+    if not write:
+        return R, D
     R.to_csv(TABLES / "h3_us_panel.csv", index=False, float_format="%.5f")
 
     # H4: latest AI-era decision per unit
@@ -123,6 +128,7 @@ def main() -> None:
     print(D[D.date >= "2023-01-01"][["c", "c_exposure", "c_composition"]].describe().round(4).to_string())
     print(R.round(4).to_string(index=False))
     print(H.groupby("basis")[["bps", "usd_per_year", "usd_per_customer_year"]].agg(["median", "max"]).round(2).to_string())
+    return R, D
 
 
 if __name__ == "__main__":

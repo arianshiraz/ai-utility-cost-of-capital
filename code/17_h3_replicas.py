@@ -24,6 +24,24 @@ _s.loader.exec_module(h1)
 
 AI_DATE = pd.Timestamp("2022-11-30")
 CLS = Path(__file__).resolve().parents[1] / "data" / "classification"
+# Settings for the robustness checks (code/19_h3_robustness.py); defaults give the main results.
+CFG = {"ai": "smh", "ai_date": AI_DATE, "post": h1.POST, "usd": False, "ng_blend": False, "write": True}
+CCY = {".L": "GBPUSD=X", ".TO": "CADUSD=X", ".AX": "AUDUSD=X", ".NZ": "NZDUSD=X"}
+IDX_CCY = {"^STOXX": "EURUSD=X", "^GSPTSE": "CADUSD=X", "^AXJO": "AUDUSD=X", "^NZ50": "NZDUSD=X", "^FTSE": "GBPUSD=X"}
+
+
+def ccy(ticker):
+    for suf, fx in CCY.items():
+        if ticker.endswith(suf):
+            return fx
+    return "EURUSD=X"
+
+
+def usd_factor(px, ticker, is_index=False):
+    """Multiplier turning a local price into dollars (1 when the USD check is off)."""
+    if not CFG["usd"]:
+        return 1.0
+    return px[IDX_CCY.get(ticker, "EURUSD=X") if is_index else ccy(ticker)]
 
 
 def in_window(df, start, end, covid=True):
@@ -37,26 +55,28 @@ def loadings(df):
     """AI loading of the firm (three-factor, ai orthogonalised) and of the index on raw smh, per H1 window,
     plus the AI-era orthogonalisation used to build ai_perp on AI-era dates."""
     out = {}
-    for tag, (a, b) in (("pre", h1.PRE), ("ai", h1.POST)):
+    f = CFG["ai"]
+    for tag, (a, b) in (("pre", h1.PRE), ("ai", CFG["post"])):
         w = in_window(df, pd.Timestamp(a), pd.Timestamp(b))
         one = np.ones(len(w))
-        k, ai_perp = h1.ols(np.column_stack([one, w.m.values]), w.smh.values)
+        k, ai_perp = h1.ols(np.column_stack([one, w.m.values]), w[f].values)
         bb, _ = h1.ols(np.column_stack([one, w.m.values, ai_perp, w.dy.values]), w.r.values)
-        g, _ = h1.ols(np.column_stack([one, w.smh.values]), w.m.values)
+        g, _ = h1.ols(np.column_stack([one, w[f].values]), w.m.values)
         out[tag] = {"b_ai": bb[2], "g": g[1], "orth": k}
     return out
 
 
 def counterfactual(df, L, which):
     d = df.copy()
-    ai = d.date >= AI_DATE
+    ai = d.date >= CFG["ai_date"]
     k = L["ai"]["orth"]
-    ai_perp = d.smh - (k[0] + k[1] * d.m)
+    f = CFG["ai"]
+    ai_perp = d[f] - (k[0] + k[1] * d.m)
     d["r_cf"], d["m_cf"] = d.r, d.m
     if which in ("exposure", "both"):
         d.loc[ai, "r_cf"] = d.r[ai] - (L["ai"]["b_ai"] - L["pre"]["b_ai"]) * ai_perp[ai]
     if which in ("composition", "both"):
-        d.loc[ai, "m_cf"] = d.m[ai] - (L["ai"]["g"] - L["pre"]["g"]) * d.smh[ai]
+        d.loc[ai, "m_cf"] = d.m[ai] - (L["ai"]["g"] - L["pre"]["g"]) * d[f][ai]
     return d
 
 
@@ -65,7 +85,27 @@ def slope(y, x):
     return float((x * (y - y.mean())).sum() / (x ** 2).sum())
 
 
-def uk() -> None:
+def uk_returns(ticker, country):
+    """Daily returns rebuilt from prices, for the USD and National Grid robustness checks."""
+    from config import RAW
+    px = pd.read_csv(RAW / "prices_yf.csv", index_col=0, parse_dates=True).sort_index()
+    y = pd.read_csv(DERIVED / "yields_daily.csv", parse_dates=["date"]).pivot_table(index="date", columns="country", values="yield_pct")
+    idx = {"UK": "^FTAS", "ES": "^IBEX", "IT": "FTSEMIB.MI"}[country]
+    loc = px["GBPUSD=X" if country == "UK" else "EURUSD=X"]  # dollars per unit of local currency
+    conv = loc if CFG["usd"] else 1.0
+    b = pd.DataFrame({"p": px[ticker] * conv, "m": px[idx] * conv, "spx": px["^GSPC"] / loc * conv,
+                      "smh": px["SMH"] / loc * conv, "nvda": px["NVDA"] / loc * conv,
+                      "y": y[{"UK": "UK", "ES": "ES", "IT": "IT_EA_ALL"}[country]].reindex(px.index)})
+    b = b[px[idx].notna().values & px[ticker].notna().values]
+    d = pd.DataFrame({"date": b.index, "r": np.log(b.p).diff().values, "m": np.log(b.m).diff().values,
+                      "spx": np.log(b.spx).diff().values, "smh": np.log(b.smh).diff().values,
+                      "nvda": np.log(b.nvda).diff().values, "dy": b.y.diff().values}).dropna()
+    if CFG["ng_blend"] and ticker == "NG.L":
+        d["m"] = 0.5 * d.m + 0.5 * d.spx
+    return d
+
+
+def uk():
     daily = pd.read_parquet(DERIVED / "returns_daily.parquet")
     of = pd.read_csv(CLS / "ofgem_dd_comparator_betas.csv")
     of = of[of.asset_beta_10y.notna()]
@@ -74,7 +114,10 @@ def uk() -> None:
     debt_beta, gearing_notional, mrp = 0.075, 0.55, 0.069 - 0.023
     rows = []
     for _, c in of.iterrows():
-        df = daily[daily.ticker == c.ticker].sort_values("date")
+        if CFG["usd"] or CFG["ng_blend"]:
+            df = uk_returns(c.ticker, c.country)
+        else:
+            df = daily[daily.ticker == c.ticker].sort_values("date")
         L = loadings(df)
         w = in_window(df, start, end, covid=False)  # regulators keep all days
         be = slope(w.r.values, w.m.values)
@@ -90,7 +133,8 @@ def uk() -> None:
             row[f"d_asset_beta_{which}"] = (1 - g) * (be - be_cf)  # actual minus counterfactual
         rows.append(row)
     t = pd.DataFrame(rows)
-    t.to_csv(TABLES / "h3_uk_replica.csv", index=False, float_format="%.5f")
+    if CFG["write"]:
+        t.to_csv(TABLES / "h3_uk_replica.csv", index=False, float_format="%.5f")
     summ = []
     for which in ("exposure", "composition", "both"):
         d_all = t[f"d_asset_beta_{which}"].mean()
@@ -101,11 +145,14 @@ def uk() -> None:
                      "of_which_foreign": d_all - dom, "d_equity_beta_notional": d_eq, "bps": d_eq * mrp * 1e4,
                      "gbp_per_bn_rav_per_year": d_eq * mrp * (1 - gearing_notional) * 1e9})
     s = pd.DataFrame(summ)
+    if not CFG["write"]:
+        return s, t
     s.to_csv(TABLES / "h3_uk_summary.csv", index=False, float_format="%.5f")
     pd.set_option("display.width", 220)
     print(t[["ticker", "ofgem_asset_beta_10y", "replica_equity_beta", "implied_gearing", "gearing_plausible",
              "b_ai_pre", "b_ai_ai", "d_asset_beta_exposure", "d_asset_beta_composition", "d_asset_beta_both"]].round(4).to_string(index=False))
     print(s.round(5).to_string(index=False))
+    return s, t
 
 
 DE_MAP = {"NATIONAL GRID PLC": ("NG.L", "^STOXX", "EURUSD=X", "DE"), "REDEIA CORP SA": ("RED.MC", "^STOXX", "EURUSD=X", "DE"),
@@ -117,7 +164,7 @@ DE_MAP = {"NATIONAL GRID PLC": ("NG.L", "^STOXX", "EURUSD=X", "DE"), "REDEIA COR
           "ASCOPIAVE SPA": ("ASC.MI", "^STOXX", "EURUSD=X", "DE")}
 
 
-def de() -> None:
+def de():
     """Prospective German calculation on the 2026 expert report's comparators (analysis notes)."""
     from config import RAW
     px = pd.read_csv(RAW / "prices_de_comparators.csv", index_col=0, parse_dates=True).sort_index()
@@ -128,9 +175,12 @@ def de() -> None:
     rows = []
     for _, c in fr.iterrows():
         tic, idx, fx, yc = DE_MAP[c.company]
-        b = pd.DataFrame({"p": px[tic], "m": px[idx], "smh": px["SMH"] / px[fx]}).dropna()
+        nv = pd.read_csv(RAW / "prices_yf.csv", index_col=0, parse_dates=True)["NVDA"].reindex(px.index)
+        lc = 1.0 if CFG["usd"] else px[fx]  # factor currency: dollars under the USD check, else the index currency
+        b = pd.DataFrame({"p": px[tic] * usd_factor(px, tic), "m": px[idx] * usd_factor(px, idx, True),
+                          "smh": px["SMH"] / lc, "nvda": nv / lc}).dropna()
         d = pd.DataFrame({"date": b.index, "r": np.log(b.p).diff().values, "m": np.log(b.m).diff().values,
-                          "smh": np.log(b.smh).diff().values})
+                          "smh": np.log(b.smh).diff().values, "nvda": np.log(b.nvda).diff().values})
         d["dy"] = y[yc].reindex(b.index).diff().values
         d = d.dropna()
         L = loadings(d)
@@ -149,7 +199,8 @@ def de() -> None:
                 row[f"d_asset_beta_{which}_{yrs}y"] = (1 - g) * (be - slope(wc.r_cf.values, wc.m_cf.values))
         rows.append(row)
     t = pd.DataFrame(rows)
-    t.to_csv(TABLES / "h3_de_replica.csv", index=False, float_format="%.5f")
+    if CFG["write"]:
+        t.to_csv(TABLES / "h3_de_replica.csv", index=False, float_format="%.5f")
     summ = []
     for yrs in (1, 3, 5):
         ok = t[(t[f"implied_gearing_{yrs}y"] >= 0.2) & (t[f"implied_gearing_{yrs}y"] <= 0.75)]  # plausibility rule, analysis notes
@@ -159,11 +210,14 @@ def de() -> None:
                          "d_asset_beta": da, "d_equity_beta_notional": da / equity_share,
                          "bps": da / equity_share * mrp * 1e4})
     s = pd.DataFrame(summ)
+    if not CFG["write"]:
+        return s, t
     s.to_csv(TABLES / "h3_de_summary.csv", index=False, float_format="%.5f")
     pd.set_option("display.width", 240)
     print(t[["ticker", "frontier_asset_beta_3y", "equity_beta_3y", "implied_gearing_3y", "implied_gearing_5y",
              "d_asset_beta_both_1y", "d_asset_beta_both_3y", "d_asset_beta_both_5y"]].round(3).to_string(index=False))
     print(s.round(4).to_string(index=False))
+    return s, t
 
 
 # CNMC memo, Cuadro 26 (p115): levered beta, D/E, statutory tax, unlevered beta; liquid comparators only
@@ -183,7 +237,7 @@ ES_COMP = [("E.ON", "EOAN.DE", "^GDAXI", 0.71, 0.98, 0.2995, 0.42), ("EVN", "EVN
            ("SSE", "SSE.L", "^FTSE", 0.89, 0.59, 0.25, 0.62)]
 
 
-def es() -> None:
+def es():
     from config import RAW
     px = pd.read_csv(RAW / "prices_es_comparators.csv", index_col=0, parse_dates=True).sort_index()
     y = pd.read_csv(DERIVED / "yields_daily.csv", parse_dates=["date"]).pivot_table(index="date", columns="country", values="yield_pct")
@@ -193,11 +247,15 @@ def es() -> None:
     for name, tic, idx, bl, de_r, tax, bu in ES_COMP:
         uk = tic.endswith(".L")
         fx = px["GBPUSD=X"] if uk else px["EURUSD=X"]
-        b = pd.DataFrame({"p": px[tic], "m": px[idx], "smh": px["SMH"] / fx,
+        nv = pd.read_csv(RAW / "prices_yf.csv", index_col=0, parse_dates=True)["NVDA"].reindex(px.index)
+        conv = fx if CFG["usd"] else 1.0
+        lc = 1.0 if CFG["usd"] else fx
+        b = pd.DataFrame({"p": px[tic] * conv, "m": px[idx] * conv, "smh": px["SMH"] / lc, "nvda": nv / lc,
                           "y": y["UK" if uk else "DE"].reindex(px.index)})
         b = b[b.p.notna() & b.m.notna()].resample("W-FRI").last()
         d = pd.DataFrame({"date": b.index, "r": np.log(b.p).diff().values, "m": np.log(b.m).diff().values,
-                          "smh": np.log(b.smh).diff().values, "dy": b.y.diff().values}).dropna()
+                          "smh": np.log(b.smh).diff().values, "nvda": np.log(b.nvda).diff().values,
+                          "dy": b.y.diff().values}).dropna()
         L = loadings(d)
         w = in_window(d, start, end, covid=False)
         be = slope(w.r.values, w.m.values)
@@ -209,7 +267,8 @@ def es() -> None:
             row[f"d_unlevered_{which}"] = (be - slope(wc.r_cf.values, wc.m_cf.values)) / (1 + (1 - tax) * de_r)
         rows.append(row)
     t = pd.DataFrame(rows)
-    t.to_csv(TABLES / "h3_es_replica.csv", index=False, float_format="%.5f")
+    if CFG["write"]:
+        t.to_csv(TABLES / "h3_es_replica.csv", index=False, float_format="%.5f")
     relever = 1 + (1 - tax_es) * de_reg
     summ = [{"counterfactual": "replica", "unlevered_beta": t.replica_unlevered_beta.mean(),
              "relevered_beta": t.replica_unlevered_beta.mean() * relever, "published_relevered_beta": 0.75,
@@ -219,11 +278,14 @@ def es() -> None:
         summ.append({"counterfactual": which, "d_unlevered_beta": du, "d_relevered_beta": du * relever,
                      "bps": du * relever * prm * 1e4})
     s = pd.DataFrame(summ)
+    if not CFG["write"]:
+        return s, t
     s.to_csv(TABLES / "h3_es_summary.csv", index=False, float_format="%.5f")
     pd.set_option("display.width", 240)
     print(t[["ticker", "cnmc_levered_beta", "replica_levered_beta", "gap_levered", "d_unlevered_both"]].round(3).to_string(index=False))
     print("mean abs gap levered", round(t.gap_levered.abs().mean(), 3), "| corr", round(np.corrcoef(t.cnmc_levered_beta, t.replica_levered_beta)[0, 1], 2))
     print(s.round(4).to_string(index=False))
+    return s, t
 
 
 if __name__ == "__main__":

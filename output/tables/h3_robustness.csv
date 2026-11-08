@@ -1,0 +1,30 @@
+check,determination,bps,d_beta,detail,coef,se,p_boot,n_pairs,median_c_ai_era
+main,UK RIIO-3,6.08588,0.00595,implied gearing 0.29 to 0.55,,,,,
+main,"Germany, prospective, 1y",30.09579,0.03254,6 comparators pass the gearing check,,,,,
+main,"Germany, prospective, 3y",34.65962,0.03747,6 comparators pass the gearing check,,,,,
+main,"Germany, prospective, 5y",22.12528,0.02392,12 comparators pass the gearing check,,,,,
+main,Spain 2026-2031,6.34841,0.01275,,,,,,
+main,"US panel, no fixed effects",,,,2.51261,0.76040,0.04650,53.00000,0.05462
+main,"US panel, state fixed effects (pre-specified)",,,,2.65440,1.73967,0.29423,53.00000,0.05462
+1 NVDA instead of SMH,UK RIIO-3,1.86042,0.00182,implied gearing 0.29 to 0.55,,,,,
+1 NVDA instead of SMH,"Germany, prospective, 1y",10.22454,0.01105,6 comparators pass the gearing check,,,,,
+1 NVDA instead of SMH,"Germany, prospective, 3y",14.35035,0.01551,6 comparators pass the gearing check,,,,,
+1 NVDA instead of SMH,"Germany, prospective, 5y",8.86395,0.00958,12 comparators pass the gearing check,,,,,
+1 NVDA instead of SMH,Spain 2026-2031,2.90946,0.00584,,,,,,
+1 NVDA instead of SMH,"US panel, no fixed effects",,,,8.60512,2.86864,0.06961,53.00000,0.01543
+1 NVDA instead of SMH,"US panel, state fixed effects (pre-specified)",,,,9.13497,6.05574,0.31053,53.00000,0.01543
+2 USD-based,UK RIIO-3,5.35579,0.00524,implied gearing 0.36 to 0.65,,,,,
+2 USD-based,"Germany, prospective, 1y",32.08935,0.03469,7 comparators pass the gearing check,,,,,
+2 USD-based,"Germany, prospective, 3y",35.33184,0.03820,10 comparators pass the gearing check,,,,,
+2 USD-based,"Germany, prospective, 5y",19.03170,0.02057,11 comparators pass the gearing check,,,,,
+2 USD-based,Spain 2026-2031,8.26280,0.01659,,,,,,
+4 AI era from 1 January 2024,UK RIIO-3,4.46272,0.00437,implied gearing 0.29 to 0.55,,,,,
+4 AI era from 1 January 2024,"Germany, prospective, 1y",32.07879,0.03468,6 comparators pass the gearing check,,,,,
+4 AI era from 1 January 2024,"Germany, prospective, 3y",37.53254,0.04058,6 comparators pass the gearing check,,,,,
+4 AI era from 1 January 2024,"Germany, prospective, 5y",21.55665,0.02330,12 comparators pass the gearing check,,,,,
+4 AI era from 1 January 2024,Spain 2026-2031,0.00000,0.00000,,,,,,
+4 AI era from 1 January 2024,"US panel, no fixed effects",,,,2.06279,0.88981,0.09841,53.00000,0.04569
+4 AI era from 1 January 2024,"US panel, state fixed effects (pre-specified)",,,,1.94387,1.87488,0.36874,53.00000,0.04569
+"7 National Grid half US, half UK",UK RIIO-3,8.42551,0.00824,implied gearing 0.25 to 0.55,,,,,
+3 excluding EIX and PCG,"US panel, no fixed effects",,,,1.87373,1.05134,0.16352,49.00000,0.05373
+3 excluding EIX and PCG,"US panel, state fixed effects (pre-specified)",,,,0.99829,2.66464,0.73697,49.00000,0.05373

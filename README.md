@@ -27,6 +27,7 @@ Regulators set the return that electricity networks may earn on equity, and cust
 │   ├── 16_figures.R                 # figures (tidyplots, ggdist)
 │   ├── 17_h3_replicas.py            # UK, Germany, Spain replicas and counterfactuals
 │   ├── 18_h3_us_panel.py            # US rate-case panel and H4
+│   ├── 19_h3_robustness.py          # H3 robustness checks
 │   └── 09_build_workbook.py         # documented Excel workbook of all data
 ├── data/
 │   ├── project_data_workbook.xlsx   # every dataset gathered, with sources
